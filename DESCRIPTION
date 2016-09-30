@@ -1,0 +1,16 @@
+Package: miscHelpers
+Title: Miscellaneous helper functions
+Version: 0.0.0.9000
+Authors@R: person("Matthew", "Dufort", email = "matt.dufort@gmail.com", role = c("aut", "cre"))
+Description: This package collects useful helper functions that don't have any
+    other obvious home.
+Imports:
+    gplots,
+    ordinal,
+    plotrix,
+    RColorBrewer
+Depends:
+    R (>= 3.2.2)
+License: GPL-3
+LazyData: true
+RoxygenNote: 5.0.1
