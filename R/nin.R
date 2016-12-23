@@ -7,6 +7,6 @@
 #' @export
 #' @return a logical vector with one element for each element in x
 #' @usage \code{x \%nin\% y}
-"%in%" <- function(x, y) {
+"%nin%" <- function(x, y) {
   !(x %in% y)
 }
