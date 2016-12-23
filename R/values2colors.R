@@ -8,6 +8,7 @@
 #' @param col.pal name of a palette from \code{RColorBrewer}; an alternative way to specify color palette. The specified palette will be passed to \code{colorRampPalette}.
 #' @param na.col color name to use for NA values in \code{x}. Defaults to "grey50".
 #' @param breaks number of intervals to break the values of \code{x} into. Defaults to 10.
+#' @importFrom RColorBrewer brewer.pal brewer.pal.info
 #' @export
 #' @return a vector of color names, of length equivalent to the length of x.
 #' @usage \code{values2colors(x,
@@ -23,7 +24,6 @@ values2colors <- function(x,
   if (is.null(col.pal)) {
     cols <- colorRampPalette(colors=c(col.start, col.end))(breaks)
   } else {
-    require(RColorBrewer)
     n <- brewer.pal.info[col.pal, "maxcolors"]
     cols <- colorRampPalette(brewer.pal(n, col.pal))(breaks)
   } 

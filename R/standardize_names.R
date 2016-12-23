@@ -3,6 +3,7 @@
 #' Standardize all elements of a character vector to the same syntax. All letters are converted to lowercase, special characters are converted to underscores, and multiple and trailing (but not leading) special characters are removed. By default, elements are deduplicated by appending "_1" and so on.
 #' @param x character vector with elements to be standardized
 #' @param dedup logical, whether to deduplicate the vector elements. If TRUE, elements that are identical after standardization are deduplicated by appending "_1", "_2", etc. Defaults to TRUE.
+#' @import stringr
 #' @export
 #' @return a character vector of the same length as \code{x}
 #' @usage \code{standardize_names(x, dedup=TRUE)}

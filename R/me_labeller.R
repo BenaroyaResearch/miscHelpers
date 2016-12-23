@@ -5,6 +5,7 @@
 #' returns the label in a format that ggplot understands.
 #' @param variable not used by this function. Included for compatibility with \code{facet_grid} and \code{facet_wrap}.
 #' @param value character vector containing the levels of the factor used for facetting. Generally passed directly to the function by \code{facet_grid} or \code{facet_wrap}.
+#' @importFrom stringr str_replace
 #' @export
 #' @return An object of the same dimension as \code{value}, with any "ME" strings removed from each element.
 #' @usage \code{facet_grid(.~variable, labeller=me_labeller))}

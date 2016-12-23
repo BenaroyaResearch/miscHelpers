@@ -4,10 +4,12 @@
 \alias{rm_tmp}
 \title{Remove temporary objects from global environment}
 \usage{
-\code{rm_tmp(...)}
+\code{rm_tmp(..., ask=TRUE)}
 }
 \arguments{
 \item{...}{optional arguments passed to \code{grep} via \code{rm_grep}.}
+
+\item{ask}{logical, whether to prompt the user before removing objects. Defaults to TRUE.}
 }
 \description{
 Clear all temporary variables, after displaying them and (by default) prompting user. By default, the user is prompted with a list of the objects before they are removed. It is assuemd that temporary variables end in ".tmp" or have single-letter names.

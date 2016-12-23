@@ -5,6 +5,7 @@
 #' @param replace character string, the text with which to replace \code{pattern}.
 #' @param pattern_find optional character string used to determine objects. Can be different from \code{pattern}, which allows renaming a subset of objects in the global environment. Defaults to NULL, which results in objects being matched with \code{pattern}.
 #' @param ask logical, whether to prompt the user before replacing objects. Defaults to TRUE.
+#' @importFrom stringr str_replace
 #' @export
 #' @usage \code{find_replace(pattern, replace,
 #'  pattern_find=NULL, ask=TRUE)}
