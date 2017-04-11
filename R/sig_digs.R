@@ -4,8 +4,8 @@
 #' @param n numeric, the number for which to determine significant figures.
 #' @export
 #' @return integer, the number of significant figures
-#' @usage \code{sigDigs(n)}
-sigDigs <- function(n) {
+#' @usage \code{sig_digs(n)}
+sig_digs <- function(n) {
   i <- 0
   # Check for decimal point
   if(length(grep("\\.", toString(n))) > 0) { # real number

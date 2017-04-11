@@ -5,8 +5,8 @@
 #' @param sep_str character string, the separator between words within vector elements. Vector elements are split on this string, each chunk is capitalized, and they are combined with this string as separator. Defaults to " ".
 #' @export
 #' @return a character vector of the same length as \code{x}.
-#' @usage \code{simpleCap(x, sep_str=" ")}
-simpleCap <- function(x, sep_str=" ") {
+#' @usage \code{simple_cap(x, sep_str=" ")}
+simple_cap <- function(x, sep_str=" ") {
   s <- strsplit(x, sep_str)
   sapply(
     s,

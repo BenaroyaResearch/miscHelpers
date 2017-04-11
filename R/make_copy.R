@@ -4,7 +4,7 @@
 #' @param var_name character string, the name of the object to be copied.
 #' @param append character string, the text to be appended to the object's name when making the copy. Defaults to ".old".
 #' @export
-#' @usage \code{makeCopy(var_name, append=".old")}
-makeCopy <- function(var_name, append=".old") {
+#' @usage \code{make_copy(var_name, append=".old")}
+make_copy <- function(var_name, append=".old") {
   assign(paste0(var_name, append), get(var_name), envir = .GlobalEnv)
 }

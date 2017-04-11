@@ -5,8 +5,8 @@
 #' @param alpha numeric, the alpha value, between 0 (completely transparent) and 255 (the original color). Passed to \code{rgb}.
 #' @export
 #' @return a character vector of the same length as \code{color_names}
-#' @usage \code{makeTransparent(color_names, alpha=100)}
-makeTransparent<-function(color_names, alpha=100) {
+#' @usage \code{make_transparent(color_names, alpha=100)}
+make_transparent<-function(color_names, alpha=100) {
   new_colors<-col2rgb(color_names)
   apply(new_colors, 2,
         function(x){rgb(red=x[1], green=x[2], blue=x[3],

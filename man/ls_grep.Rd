@@ -2,7 +2,7 @@
 % Please edit documentation in R/ls_grep.R
 \name{ls_grep}
 \alias{ls_grep}
-\title{List in global environment matching a regex pattern}
+\title{List objects in global environment matching a regex pattern}
 \usage{
 \code{ls_grep(pattern, value=TRUE, ...)}
 }
@@ -17,6 +17,6 @@
 a vector of character names or numeric positions for the matches.
 }
 \description{
-Determine the names of all objecs in the global environment that match a specified regex pattern.
+Determine the names of all objects in the global environment that match a specified regex pattern.
 }
 

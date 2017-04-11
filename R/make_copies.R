@@ -5,8 +5,8 @@
 #' @param append character string, the text to be appended to the objects' names when making the copies. Defaults to ".old".
 #' @param ask logical, whether to prompt the user before copying objects. Defaults to TRUE.
 #' @export
-#' @usage \code{makeCopies(var_pattern, append=".old", ask=TRUE)}
-makeCopies <- function(var_pattern, append=".old", ask=TRUE) {
+#' @usage \code{make_copies(var_pattern, append=".old", ask=TRUE)}
+make_copies <- function(var_pattern, append=".old", ask=TRUE) {
   vars_to_copy <- ls_grep(var_pattern)
   if (ask) {
     cat("About to copy the following objects with suffix '", append, "':\n\n", sep="")
