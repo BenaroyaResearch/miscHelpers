@@ -21,7 +21,7 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, dedup=TRUE) {
   if (rows) {
     keep_rows <-
       apply(x, MARGIN=1, function(x) {sum(!is.na(x))}) > 0
-    x <- x[,keep_rows]
+    x <- x[keep_rows,]
   }
   
   x
