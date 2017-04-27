@@ -8,8 +8,8 @@
 #' @param cols,rows logical, whether to trim columns and rows, respectively. By default, both columns and rows are trimmed.
 #' @export
 #' @return an object of the same type as \code{x}, potentially with fewer rows and/or columns
-#' @usage \code{standardize_names(x, cols=TRUE, rows=TRUE, dedup=TRUE)}
-standardize_dimnames <- function(x, cols=TRUE, rows=TRUE, dedup=TRUE) {
+#' @usage \code{remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, dedup=TRUE)}
+remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, dedup=TRUE) {
   if (!is.data.frame(x) & !is.matrix(x))
     stop("Input object type not recognized. This function is for use on data frames and matrices.")
   if (cols) {
