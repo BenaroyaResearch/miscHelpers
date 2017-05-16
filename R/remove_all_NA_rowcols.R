@@ -15,7 +15,9 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE) {
   if (cols) {
     keep_cols <-
       apply(x, MARGIN=2, function(x) {sum(!is.na(x))}) > 0
+    colnames.orig <- colnames(x)[keep_cols] # necessary to avoid deduplicating column names
     x <- x[,keep_cols]
+    colnames(x) <- colnames.orig # necessary to avoid deduplicating column names
   }
   
   if (rows) {

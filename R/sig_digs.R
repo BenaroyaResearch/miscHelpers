@@ -6,6 +6,8 @@
 #' @return integer, the number of significant figures
 #' @usage \code{sig_digs(n)}
 sig_digs <- function(n) {
+  if (length(n) > 1)
+    warning("sig_digs works only on single numbers. Returning value for first element. To apply to a vector of numbers, use sapply(n, sig_digs).")
   i <- 0
   # Check for decimal point
   if(length(grep("\\.", toString(n))) > 0) { # real number

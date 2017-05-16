@@ -27,7 +27,7 @@ standardize_names <- function(x, dedup=TRUE) {
             x[x == u[i]],
             formatC(
               1:n, 
-              width = 1 + floor(log(n, 10)), flag = "0"), sep = "")
+              width = 1 + floor(log(n, 10)), flag = "0"), sep = "_")
       }
     }
   }
