@@ -15,21 +15,23 @@
 #' col.start="blue", col.end="red",
 #' col.pal=NULL, na.col="grey50",
 #' breaks=10)}
-values2colors <- function(x,
-                          col.start="blue", col.end="red",
-                          col.pal=NULL, na.col="grey50",
-                          breaks=10) {
-  if (!is.numeric(x)) stop("Input vector is not numeric.")
-  
-  if (is.null(col.pal)) {
-    cols <- colorRampPalette(colors=c(col.start, col.end))(breaks)
-  } else {
-    n <- brewer.pal.info[col.pal, "maxcolors"]
-    cols <- colorRampPalette(brewer.pal(n, col.pal))(breaks)
-  } 
-  
-  cols.out <- cols[as.numeric(cut(x, breaks=breaks))]
-  cols.out[is.na(cols.out)] <- na.col
-  
-  return(cols.out)
-}
+values2colors <-
+  function(
+    x,
+    col.start="blue", col.end="red",
+    col.pal=NULL, na.col="grey50",
+    breaks=10) {
+    if (!is.numeric(x)) stop("Input vector is not numeric.")
+    
+    if (is.null(col.pal)) {
+      cols <- colorRampPalette(colors=c(col.start, col.end))(breaks)
+    } else {
+      n <- brewer.pal.info[col.pal, "maxcolors"]
+      cols <- colorRampPalette(brewer.pal(n, col.pal))(breaks)
+    } 
+    
+    cols.out <- cols[as.numeric(cut(x, breaks=breaks))]
+    cols.out[is.na(cols.out)] <- na.col
+    
+    return(cols.out)
+  }
