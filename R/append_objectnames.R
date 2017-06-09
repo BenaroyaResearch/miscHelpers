@@ -6,19 +6,27 @@
 #' @param sep character string, text to place as separator between object names and appended text. Defaults to "".
 #' @param ask logical, whether to prompt the user before replacing objects. Defaults to TRUE.
 #' @export
-#' @usage \code{find_replace(pattern, replace,
-#'  sep="", ask=TRUE)}
-append_objectnames <- function(objects, append_text, sep="", ask=TRUE) {
-  objects <- objects[objects %in% base::ls(envir=.GlobalEnv)]
-  if (ask) {
-    cat("About to replace the following objects:\n\n")
-    cat(objects, sep = "\n")
-    proceed <- read_yn("Do you want to proceed? (Enter y or n): ")
-    if (proceed == "n") 
-      stop("Objects not replaced.")
+#' @usage \code{
+#' append_objectnames(
+#'   objects, append_text,
+#'   sep="", ask=TRUE)}
+append_objectnames <- 
+  function(objects, append_text,
+           sep="", ask=TRUE) {
+    
+    objects.drop <- objects[!(objects %in% base::ls(envir=.GlobalEnv))]
+    warning("The following objects were not found in the global environment:\n", paste(objects.drop, sep="", collapse=", "))
+    objects <- objects[objects %in% base::ls(envir=.GlobalEnv)]
+    
+    if (ask) {
+      cat("About to replace the following objects:\n\n")
+      cat(objects, sep = "\n")
+      proceed <- read_yn("Do you want to proceed? (Enter y or n): ")
+      if (proceed == "n") 
+        stop("Objects not replaced.")
+    }
+    for (i in objects) {
+      assign(paste(i, append_text, sep=sep), get(i, envir=.GlobalEnv), envir=.GlobalEnv)
+      rm(list=i, envir=.GlobalEnv)
+    }
   }
-  for (i in objects) {
-    assign(paste(i, append_text, sep=sep), get(i, envir=.GlobalEnv), envir=.GlobalEnv)
-    rm(list=i, envir=.GlobalEnv)
-  }
-}
