@@ -17,4 +17,3 @@ a character vector of the same length as \code{x}
 \description{
 Standardize all elements of a character vector to the same syntax. All letters are converted to lowercase, special characters are converted to underscores, and multiple and trailing (but not leading) special characters are removed. By default, elements are deduplicated by appending "_1" and so on.
 }
-

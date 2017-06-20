@@ -16,4 +16,3 @@
 \description{
 Identify and remove all objects in the global environment that match a specified regex pattern. By default, the user is prompted with a list of the objects before they are removed.
 }
-

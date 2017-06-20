@@ -19,4 +19,3 @@ a vector of object names
 \description{
 List the names of all objects in a package, optionally filtered for pattern matches. Borrowed from @_inundata
 }
-

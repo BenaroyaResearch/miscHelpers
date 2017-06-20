@@ -22,4 +22,3 @@ a logical vector with one element for each element in x
 \description{
 Test if a vector of numbers is inside of a specified range, with the bounds optionally included.
 }
-

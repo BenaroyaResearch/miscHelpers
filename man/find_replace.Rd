@@ -19,4 +19,3 @@
 \description{
 Search all object names in the global environment for a regex pattern, and replace that pattern with specified text. This is actually done by creating copies of the objects with new names and deleting the original versions, which may consume large amounts of memory if the objects are large. By default, the user is prompted before objects are renamed.
 }
-

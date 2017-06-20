@@ -17,4 +17,3 @@ character, either 'y' or 'n'. Uppercase responses are converted to lowercase.
 Prompt user for a yes or no answer
 Prompt the user for a yes or no answer, and repeat until an acceptable response is entered
 }
-

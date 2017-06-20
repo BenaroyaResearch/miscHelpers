@@ -14,4 +14,3 @@
 \description{
 Clear all temporary variables, after displaying them and (by default) prompting user. By default, the user is prompted with a list of the objects before they are removed. It is assuemd that temporary variables end in ".tmp" or have single-letter names.
 }
-

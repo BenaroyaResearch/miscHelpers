@@ -20,4 +20,3 @@ composed entirely of NAs are removed.This is used primarily after reading in a s
 columns and/or rows may be included due to quirks in the file reading process. It can also remove cases
 and/or variables with no data.
 }
-

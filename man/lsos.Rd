@@ -14,4 +14,3 @@
 \description{
 Lists the largest objects in the global environment, by memory usage.
 }
-

@@ -15,4 +15,3 @@ a (possibly empty) character vector, with the names of the redundnat columns. No
 \description{
 This function identifies the redundant columns in a model matrix, if the model matrix is not of full rank.
 }
-

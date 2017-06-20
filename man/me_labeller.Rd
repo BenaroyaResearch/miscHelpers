@@ -19,4 +19,3 @@ This is a function to pass facet labels to ggplot functions \code{facet_grid} an
 so that the facets have the module color name as the label. Basically, it strips off the "ME" and
 returns the label in a format that ggplot understands.
 }
-

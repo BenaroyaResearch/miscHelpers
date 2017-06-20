@@ -17,4 +17,3 @@ a character vector of the same length as \code{color_names}
 \description{
 Add a transparency factor to each color in a vector of color names, using alpha on a scale of 0-255. Adapted from http://stackoverflow.com/questions/8047668/transparent-equivalent-of-given-color.
 }
-

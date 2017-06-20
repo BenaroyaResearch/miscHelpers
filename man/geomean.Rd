@@ -17,4 +17,3 @@ numeric, the value of the geometric mean
 \description{
 Calculate the geometric mean of a numeric vector, passing arguments on to \code{mean}.
 }
-

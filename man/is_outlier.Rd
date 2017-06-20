@@ -16,4 +16,3 @@ a boolean vector, containing TRUE for outlier elements and FALSE for all other e
 Determine outliers of a numeric vector, based on the first and third quartile minus/plus 1.5 times the
 inter-quartile range.
 }
-

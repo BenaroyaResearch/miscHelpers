@@ -17,4 +17,3 @@ logical, either TRUE (all elements are equivalent) or FALSE (some elements are n
 \description{
 Test a vector (numeric or otherwise) for equivalency across all elements. For numeric values, a tolerance is used to test equivalency. For non-numeric values, \code{unique} is used to determine equivalency.
 }
-

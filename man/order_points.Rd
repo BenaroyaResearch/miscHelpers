@@ -20,4 +20,3 @@ Re-order a data frame to control the plotting order of points in ggplot. This is
 control over-plotting of points by sorting the data frame based on input arguments. It is
 used in plots by symbol and color, where overplotting may affect readability.
 }
-

@@ -10,4 +10,3 @@
 \description{
 This is an alternative to the base \code{ls} function, with additional functionality. Documentation to be written.
 }
-

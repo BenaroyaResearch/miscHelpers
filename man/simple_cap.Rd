@@ -17,4 +17,3 @@ a character vector of the same length as \code{x}.
 \description{
 Capitalize the first letter of each word in each element of a character vector. By default, words are assumed to be separated " ".
 }
-

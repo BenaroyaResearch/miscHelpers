@@ -19,4 +19,3 @@ a vector of character names or numeric positions for the matches.
 \description{
 Determine the names of all objects in the global environment that match a specified regex pattern.
 }
-

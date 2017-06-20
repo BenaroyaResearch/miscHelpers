@@ -28,4 +28,3 @@ Convert a vector of numeric values to a vector of color names. The input vector 
 of intervals, set by \code{breaks}. Values in each interval are assigned a color along a scale generated
 by \code{colorRampPalette}.
 }
-

@@ -15,4 +15,3 @@ integer, the number of NAs in \code{x}
 \description{
 Calculate the number of NAs in an object. Can be useful for determining the sparseness of matrices and data frames, or their component rows or columns.
 }
-

@@ -15,4 +15,3 @@ integer, the number of significant figures
 \description{
 Calculate the number of significant figures in an integer or floating point number. NOTE: this function IS NOT vectorized. To run on a vector of numbers, use \code{sapply(x, sigDigs)}. Assumes that consecutive trailing 0s of integers and leading 0s of decimals are not significant. E.g. \code{sigDigs(10) == 1}.
 }
-

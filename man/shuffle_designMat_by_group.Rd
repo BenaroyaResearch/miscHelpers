@@ -22,4 +22,3 @@ It is designed to test the effect of assocations between variables across studie
 by allowing comparison of the trend recovered if all relationships within the data are
 retained EXCEPT FOR the values of the variable of interest.
 }
-

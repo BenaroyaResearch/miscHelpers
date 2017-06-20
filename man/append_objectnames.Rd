@@ -21,4 +21,3 @@ append_objectnames(
 \description{
 For a specified set of objects in the global environment, append text to the end of the object names. This is actually done by creating copies of the objects with new names and deleting the original versions, which may consume large amounts of memory if the objects are large. By default, the user is prompted before objects are renamed.
 }
-

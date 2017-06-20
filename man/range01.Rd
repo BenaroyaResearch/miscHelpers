@@ -10,6 +10,6 @@
 \item{x}{numeric vector to be normalized}
 }
 \description{
-Normalize a numeric vector to 0-1 range
+This function normalizes a numeric vector to have minimum of 0 and maximum of 1, with values in between linearly
+transformed. It ignores NA values in the calculation of min and max.
 }
-

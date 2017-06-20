@@ -18,4 +18,3 @@ a logical vector with one element for each element in x
 Determine the members of one vector that are NOT found in another vector.  This is equivalent to
 \code{!(x \%in\% y)}, but is a useful shortcut. Borrowed from Stephen Turner.
 }
-
