@@ -15,5 +15,5 @@
 a single numeric value
 }
 \description{
-Calculate the standard error of the mean of a vector of numbers
+Calculate the standard error of the mean of a vector of numbers, as \code{SD(x) / sqrt(N)}.
 }

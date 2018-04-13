@@ -1,6 +1,6 @@
 #' Calculate the standard error of the mean
 #'
-#' Calculate the standard error of the mean of a vector of numbers
+#' Calculate the standard error of the mean of a vector of numbers, as \code{SD(x) / sqrt(N)}.
 #' @param x numeric vector or matrix
 #' @param na.rm logical. Should missing values be removed?
 #' @export
