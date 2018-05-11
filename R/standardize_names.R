@@ -15,19 +15,21 @@ standardize_names <- function(x, dedup=TRUE) {
     str_replace_all("[\\._]+","_") %>%
     str_replace("_$","")
   if (dedup) {
-    tab <- table(x)
-    tab <- tab[tab > 1]
-    lentab <- length(tab)
-    if (lentab > 0) {
-      u <- names(tab)
-      for (i in 1:lentab) {
-        n <- tab[i]
-        x[x == u[i]] <-
-          paste(
-            x[x == u[i]],
-            formatC(
-              1:n, 
-              width = 1 + floor(log(n, 10)), flag = "0"), sep = "_")
+    while (any(table(x) > 1)) {
+      tab <- table(x)
+      tab <- tab[tab > 1]
+      lentab <- length(tab)
+      if (lentab > 0) {
+        u <- names(tab)
+        for (i in 1:lentab) {
+          n <- tab[i]
+          x[x == u[i]] <-
+            paste(
+              x[x == u[i]],
+              formatC(
+                1:n, 
+                width = 1 + floor(log(n, 10)), flag = "0"), sep = "_")
+        }
       }
     }
   }
