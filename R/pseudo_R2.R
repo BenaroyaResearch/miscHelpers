@@ -9,7 +9,7 @@ pseudo_R2 <- function(x) {
   if (class(x) %in% c("lm")) {
     R2 <-
       cor(fitted(x), x$model[,1]) ^ 2
-  } else if (class(x) %in% c("merModLmerTest", "lmerMod", "merMod")) {
+  } else if (class(x) %in% c("lmerModLmerTest", "lmerMod", "merMod")) {
     R2 <-
       cor(fitted(x), x@frame[,1]) ^ 2
   } else stop(paste("Not sure what to do with object of class", class(x)))
