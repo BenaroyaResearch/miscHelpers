@@ -10,6 +10,8 @@
 \item{x}{data frame or matrix with rows and/or columns to be removed}
 
 \item{cols, rows}{logical, whether to trim columns and rows, respectively. By default, both columns and rows are trimmed.}
+
+\item{interpret_text}{whether to convert text "NA" to NA values. Default behavior is to set values that are read as "NA" to NA before filtering.}
 }
 \value{
 an object of the same type as \code{x}, potentially with fewer rows and/or columns
