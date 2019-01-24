@@ -4,13 +4,13 @@
 \alias{is_outlier}
 \title{Determine outliers}
 \usage{
-\code{is_outlier(x)}
+\code{is_outlier(x, na.rm=FALSE)}
 }
 \arguments{
-\item{x}{numeric vector containing values test for outliers}
+\item{x}{numeric vector containing values to test for outliers}
 }
 \value{
-a boolean vector, containing TRUE for outlier elements and FALSE for all other elements.
+logical vector, containing TRUE for outlier elements and FALSE for all other elements.
 }
 \description{
 Determine outliers of a numeric vector, based on the first and third quartile minus/plus 1.5 times the
