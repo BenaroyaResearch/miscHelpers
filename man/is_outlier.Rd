@@ -8,6 +8,8 @@
 }
 \arguments{
 \item{x}{numeric vector containing values to test for outliers}
+
+\item{na.rm}{logical, whether to remove NA values when calculating quantiles and IQR. Passed to \code{quantile()} and \code{IQR()}. Defaults to FALSE.}
 }
 \value{
 logical vector, containing TRUE for outlier elements and FALSE for all other elements.
