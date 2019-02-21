@@ -8,7 +8,7 @@
 #' @importFrom stringr str_replace
 #' @export
 #' @return An object of the same dimension as \code{value}, with any "ME" strings removed from each element.
-#' @usage \code{facet_grid(.~variable, labeller=me_labeller))}
+#' @usage ggplot2::facet_grid(.~variable, labeller=me_labeller)
 me_labeller <- function(variable, value) {
   return(str_replace(value, "ME", ""))
 }

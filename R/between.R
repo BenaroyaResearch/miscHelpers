@@ -6,10 +6,10 @@
 #' @param inc_bounds logical, whether to include the bounds in the set that is tested. If set to TRUE, values identical to the bounds are considered matches. Defaults to FALSE. Works only if the function is not used as an infix operator (see usage example below).
 #' @export
 #' @return a logical vector with one element for each element in x
-#' @usage \code{
-#' x \%between\% y
+#' @usage
+#' x \%between\% rng
 #' 
-#' `\%between\%`(x, y, inc_bounds=TRUE)}
+#' `\%between\%`(x, rng, inc_bounds=FALSE)
 "%between%" <- function(x, rng, inc_bounds=FALSE) {
   if (inc_bounds) {x>=rng[1] & x<=rng[2]
   } else {x>rng[1] & x<rng[2]}

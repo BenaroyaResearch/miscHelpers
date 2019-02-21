@@ -5,18 +5,15 @@
 #' @param append_text character string, the text to append to each object's name.
 #' @param sep character string, text to place as separator between object names and appended text. Defaults to "".
 #' @param ask logical, whether to prompt the user before replacing objects. Defaults to TRUE.
+#' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.
 #' @export
-#' @usage \code{
-#' append_objectnames(
-#'   objects, append_text,
-#'   sep="", ask=TRUE)}
+#' @usage append_objectnames(objects, append_text, sep="", ask=TRUE, envir=.GlobalEnv)
 append_objectnames <- 
-  function(objects, append_text,
-           sep="", ask=TRUE) {
+  function(objects, append_text, sep="", ask=TRUE, envir=.GlobalEnv) {
     
-    objects.drop <- objects[!(objects %in% base::ls(envir=.GlobalEnv))]
-    warning("The following objects were not found in the global environment:\n", paste(objects.drop, sep="", collapse=", "))
-    objects <- objects[objects %in% base::ls(envir=.GlobalEnv)]
+    objects.drop <- objects[!(objects %in% base::ls(envir=envir))]
+    warning("The following objects were not found in the specified environment:\n", paste(objects.drop, sep="", collapse=", "))
+    objects <- objects[objects %in% base::ls(envir=envir)]
     
     if (ask) {
       cat("About to replace the following objects:\n\n")
@@ -26,7 +23,7 @@ append_objectnames <-
         stop("Objects not replaced.")
     }
     for (i in objects) {
-      assign(paste(i, append_text, sep=sep), get(i, envir=.GlobalEnv), envir=.GlobalEnv)
-      rm(list=i, envir=.GlobalEnv)
+      assign(paste(i, append_text, sep=sep), get(i, envir=envir), envir=envir)
+      rm(list=i, envir=envir)
     }
   }

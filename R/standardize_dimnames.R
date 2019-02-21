@@ -11,7 +11,7 @@
 #' @import stringr
 #' @export
 #' @return an object of the same type and dimension as \code{x}
-#' @usage \code{standardize_dimnames(x, cols=TRUE, rows=FALSE, dedup=TRUE)}
+#' @usage standardize_dimnames(x, cols=TRUE, rows=FALSE, dedup=TRUE)
 standardize_dimnames <- function(x, cols=TRUE, rows=FALSE, dedup=TRUE) {
   if (!is.data.frame(x) & !is.matrix(x))
     stop("Input object type not recognized. This function is for use on data frames and matrices.")

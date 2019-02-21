@@ -4,7 +4,7 @@
 \alias{lsp}
 \title{List package contents}
 \usage{
-\code{lsp(package, all.names=FALSE, pattern)}
+lsp(package, all.names=FALSE, pattern)
 }
 \arguments{
 \item{package}{the package object name (not quoted)}

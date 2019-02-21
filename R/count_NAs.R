@@ -4,5 +4,5 @@
 #' @param x object to be tested for NAs. Can be a data.frame, matrix, vector, list. For lists, it looks at the list elements themselves, not within those elements. For other object types, results may not be as expected.
 #' @export
 #' @return integer, the number of NAs in \code{x}
-#' @usage \code{count_NAs(x)}
+#' @usage count_NAs(x)
 count_NAs <- function(x) sum(is.na(x))

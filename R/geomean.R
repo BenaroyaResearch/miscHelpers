@@ -5,7 +5,7 @@
 #' @param ... optional arguments, passed to \code{mean}. \code{na.rm} is particularly useful.
 #' @export
 #' @return numeric, the value of the geometric mean
-#' @usage \code{geomean(x, ...)}
+#' @usage geomean(x, ...)
 geomean <- function(x, ...) {
   if (any(x <= 0)) stop("Geometric mean cannot be computed for vectors with 0 or negative values.")
   exp(mean(log(x), ...))

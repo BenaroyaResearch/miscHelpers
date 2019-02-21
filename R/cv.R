@@ -7,7 +7,7 @@
 #' @param na.rm logical. Should missing values be removed?
 #' @export
 #' @return a single numeric value
-#' @usage \code{cv(x, na.rm=FALSE)}
+#' @usage cv(x, na.rm=FALSE)
 cv <- function(x, na.rm=FALSE) {
   sd(x, na.rm=na.rm) / mean(x, na.rm=na.rm)
 }

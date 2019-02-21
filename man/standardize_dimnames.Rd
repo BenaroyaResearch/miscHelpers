@@ -4,7 +4,7 @@
 \alias{standardize_dimnames}
 \title{Standardize the column and/or row names of a matrix or data frame to standard syntax}
 \usage{
-\code{standardize_dimnames(x, cols=TRUE, rows=FALSE, dedup=TRUE)}
+standardize_dimnames(x, cols=TRUE, rows=FALSE, dedup=TRUE)
 }
 \arguments{
 \item{x}{data frame or matrix with column and/or row names to be standardized}

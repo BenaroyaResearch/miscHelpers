@@ -7,10 +7,11 @@
 #' @param drop_black logical, whether to drop the black from the palette. Defaults to FALSE.
 #' @export
 #' @return a character vector with the colors
-#' @usage \code{average_color(
-#' n_colors,
-#' shuffle_colors=FALSE,
-#' drop_yellow=TRUE, drop_black=FALSE)}
+#' @usage
+#' big_colorblind_pal(
+#'   n_colors,
+#'   shuffle_colors=FALSE,
+#'   drop_yellow=TRUE, drop_black=FALSE)
 big_colorblind_pal <-
   function(n_colors, shuffle_colors=FALSE, drop_yellow=TRUE, drop_black=FALSE) {
     pal.start <- ggthemes::colorblind_pal()(8)

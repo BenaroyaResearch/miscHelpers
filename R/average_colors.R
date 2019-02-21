@@ -5,7 +5,7 @@
 #' @param method character, specificying the color space in which to average. Currently only "RGB" is accepted.
 #' @export
 #' @return character, the hexadecimal representation of the color
-#' @usage \code{average_color(x, method="RGB")}
+#' @usage average_colors(x, method="RGB")
 #' @details Solution derived from answer by stackoverflow user Deleplace at https://stackoverflow.com/questions/14482226/how-can-i-get-the-color-halfway-between-two-colors
 average_colors <- function(x, method="RGB") {
   method <- match.arg(method, choices=c("RGB"))

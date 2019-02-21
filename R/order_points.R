@@ -7,8 +7,7 @@
 #' @param method character string, specifying how to order the rows. Currently accepted values are "random", which randomizes the order, and "input", which returns the input data frame as-is.
 #' @export
 #' @return a data frame with same contents as \code{x}, with rows re-ordered according to \code{method}.
-#' @usage \code{
-#' order_points(x, method)}
+#' @usage order_points(x, method)
 order_points <- function(x, method) {
   method <- match.arg(method, choices=c("input", "random"))
   switch(method,

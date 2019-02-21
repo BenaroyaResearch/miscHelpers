@@ -4,7 +4,7 @@
 \alias{shuffle_designMat_by_group}
 \title{Shuffle a variable in a design matrix within studies or groups}
 \usage{
-\code{shuffle_designMat_by_group(designMat, shuffle_col, group_cols)}
+shuffle_designMat_by_group(designMat, shuffle_col, group_cols)
 }
 \arguments{
 \item{designMat}{a design matrix.}

@@ -6,7 +6,7 @@
 #' @param pattern a regular expression, passed to \code{ls}. Only names matching \code{pattern} are returned.
 #' @export
 #' @return a vector of object names
-#' @usage \code{lsp(package, all.names=FALSE, pattern)}
+#' @usage lsp(package, all.names=FALSE, pattern)
 lsp <-function(package, all.names = FALSE, pattern) {
   package <- deparse(substitute(package))
   base::ls(

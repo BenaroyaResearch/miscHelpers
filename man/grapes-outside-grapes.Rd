@@ -4,10 +4,9 @@
 \alias{\%outside\%}
 \title{Test if numbers are outside of a specified range}
 \usage{
-\code{
-x \%outside\% y
+x \%outside\% rng
 
-`\%outside\%`(x, y, inc_bounds=TRUE)}
+`\%outside\%`(x, rng, inc_bounds=FALSE)
 }
 \arguments{
 \item{x}{numeric vector to be tested.}

@@ -4,7 +4,7 @@
 #' @param x result from model fitting, generally the output of lm or lmer.
 #' @export
 #' @return numeric, the squared correlation of the fitted values and the observed values of the dependent variable
-#' @usage \code{pseudo_R2(x)}
+#' @usage pseudo_R2(x)
 pseudo_R2 <- function(x) {
   if (class(x) %in% c("lm")) {
     R2 <-

@@ -4,12 +4,14 @@
 \alias{ls_grep}
 \title{List objects in global environment matching a regex pattern}
 \usage{
-\code{ls_grep(pattern, value=TRUE, ...)}
+ls_grep(pattern, value=TRUE, envir=.GlobalEnv, ...)
 }
 \arguments{
 \item{pattern}{character string, the regex pattern to match. Passed to \code{grep}.}
 
 \item{value}{logical, whether to return the names of the objects. If set to FALSE, the position of the objects in the global environment object listing is returned. Defaults to TRUE.}
+
+\item{envir}{the environment in which to search. Defaults to the global environment, \code{.GlobalEnv}.}
 
 \item{...}{optional arguments passed to \code{grep}.}
 }

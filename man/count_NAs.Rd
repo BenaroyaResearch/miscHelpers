@@ -4,7 +4,7 @@
 \alias{count_NAs}
 \title{Calculate the number of NAs in an object}
 \usage{
-\code{count_NAs(x)}
+count_NAs(x)
 }
 \arguments{
 \item{x}{object to be tested for NAs. Can be a data.frame, matrix, vector, list. For lists, it looks at the list elements themselves, not within those elements. For other object types, results may not be as expected.}

@@ -4,7 +4,7 @@
 \alias{average_colors}
 \title{Determine the numerical average of a vector of colors}
 \usage{
-\code{average_color(x, method="RGB")}
+average_colors(x, method="RGB")
 }
 \arguments{
 \item{x}{vector of color names to average}

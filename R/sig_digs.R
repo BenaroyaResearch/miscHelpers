@@ -4,7 +4,7 @@
 #' @param n numeric, the number for which to determine significant figures.
 #' @export
 #' @return integer, the number of significant figures
-#' @usage \code{sig_digs(n)}
+#' @usage sig_digs(n)
 sig_digs <- function(n) {
   if (length(n) > 1)
     warning("sig_digs works only on single numbers. Returning value for first element. To apply to a vector of numbers, use sapply(n, sig_digs).")

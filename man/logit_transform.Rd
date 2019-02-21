@@ -4,7 +4,7 @@
 \alias{logit_transform}
 \title{Transform a vector of proportions using the logit transformation}
 \usage{
-\code{logit_transform(x, buffer=0.001)}
+logit_transform(x, buffer=0.001)
 }
 \arguments{
 \item{x}{vector of values to transform. Must be between 0 and 1, inclusive.}

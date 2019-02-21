@@ -6,7 +6,7 @@
 #' @import stringr
 #' @export
 #' @return a character vector of the same length as \code{x}
-#' @usage \code{standardize_names(x, dedup=TRUE)}
+#' @usage standardize_names(x, dedup=TRUE)
 standardize_names <- function(x, dedup=TRUE) {
   x <- x %>%
     str_trim() %>%

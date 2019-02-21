@@ -4,5 +4,5 @@
 #' @param ... optional arguments passed to \code{grep} via \code{rm_grep}.
 #' @param ask logical, whether to prompt the user before removing objects. Defaults to TRUE.
 #' @export
-#' @usage \code{rm_tmp(..., ask=TRUE)}
+#' @usage rm_tmp(..., ask=TRUE)
 rm_tmp <- function(..., ask=TRUE) rm_grep("^[a-zA-Z]$|\\.tmp", ask=ask, ...)

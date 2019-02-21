@@ -4,7 +4,7 @@
 \alias{all_equal}
 \title{Test a vector (numeric or otherwise) for equivalency across all elements}
 \usage{
-\code{all_equal(x, tol=.Machine$double.eps ^ 0.5)}
+all_equal(x, tol=.Machine$double.eps ^ 0.5)
 }
 \arguments{
 \item{x}{vector to test for equivalency}

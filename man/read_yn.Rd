@@ -5,7 +5,7 @@
 \title{Prompt user for a yes or no answer
 Prompt the user for a yes or no answer, and repeat until an acceptable response is entered}
 \usage{
-\code{read_yn(display_text)}
+read_yn(display_text)
 }
 \arguments{
 \item{display_text}{character string, the text to be displayed at the prompt.}

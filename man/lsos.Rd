@@ -4,7 +4,7 @@
 \alias{lsos}
 \title{List the N largest objects in the global environment}
 \usage{
-\code{lsos(..., n=10)}
+lsos(..., n=10)
 }
 \arguments{
 \item{...}{optional arguments, passed to \code{ls.objects}}

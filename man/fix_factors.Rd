@@ -4,7 +4,7 @@
 \alias{fix_factors}
 \title{Trim excess factor levels from columns of a data frame}
 \usage{
-\code{fix_factors(data)}
+fix_factors(data)
 }
 \arguments{
 \item{data}{a data frame, with 0 or more columns of class \code{factor}}

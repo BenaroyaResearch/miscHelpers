@@ -4,10 +4,9 @@
 \alias{\%between\%}
 \title{Test if numbers are within a specified range}
 \usage{
-\code{
-x \%between\% y
+x \%between\% rng
 
-`\%between\%`(x, y, inc_bounds=TRUE)}
+`\%between\%`(x, rng, inc_bounds=FALSE)
 }
 \arguments{
 \item{x}{numeric vector to be tested.}

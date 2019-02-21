@@ -4,7 +4,7 @@
 \alias{\%nin\%}
 \title{Determine non-matches of one vector to another}
 \usage{
-\code{x \%nin\% y}
+x \%nin\% y
 }
 \arguments{
 \item{x}{vector to be matched to elements in \code{y}.}

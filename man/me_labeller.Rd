@@ -4,7 +4,7 @@
 \alias{me_labeller}
 \title{Labeller function for plotting WGCNA modules in facet_grid or facet_wrap}
 \usage{
-\code{facet_grid(.~variable, labeller=me_labeller))}
+ggplot2::facet_grid(.~variable, labeller=me_labeller)
 }
 \arguments{
 \item{variable}{not used by this function. Included for compatibility with \code{facet_grid} and \code{facet_wrap}.}

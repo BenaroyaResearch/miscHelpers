@@ -5,7 +5,7 @@
 #' @param na.rm logical. Should missing values be removed?
 #' @export
 #' @return a single numeric value
-#' @usage \code{se(x)}
+#' @usage se(x, na.rm=FALSE)
 se <- function(x, na.rm=FALSE) {
   sd(x, na.rm=na.rm) / 
     if (!na.rm) sqrt(length(x)) else sqrt(length(x) - sum(is.na(x)))

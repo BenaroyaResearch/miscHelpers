@@ -6,7 +6,7 @@
 #' @param y vector to be searched for elements of \code{x}.
 #' @export
 #' @return a logical vector with one element for each element in x
-#' @usage \code{x \%nin\% y}
+#' @usage x \%nin\% y
 "%nin%" <- function(x, y) {
   !(x %in% y)
 }

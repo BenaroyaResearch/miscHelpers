@@ -6,7 +6,7 @@
 #' @param buffer numeric, the amount to nudge limit values inwards before transformation to avoid returning infinite values. Defaults to 0.001. Set to 0 to return infinite values. Setting to "estimate" will use the smallest distance from 0 or 1 in \code{x} as the buffer.
 #' @export
 #' @return a vector of the transformed values
-#' @usage \code{logit_transform(x, buffer=0.001)}
+#' @usage logit_transform(x, buffer=0.001)
 logit_transform <- function(x, buffer=0.001) {
   if (any(x > 1 | x < 0, na.rm=TRUE)) stop("Input vector contains values outside the range [0,1].")
   if (buffer == "estimate")

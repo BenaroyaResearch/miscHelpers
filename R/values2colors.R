@@ -11,10 +11,11 @@
 #' @importFrom RColorBrewer brewer.pal brewer.pal.info
 #' @export
 #' @return a vector of color names, of length equivalent to the length of x.
-#' @usage \code{values2colors(x,
-#' col.start="blue", col.end="red",
-#' col.pal=NULL, na.col="grey50",
-#' breaks=10)}
+#' @usage
+#' values2colors(x,
+#'   col.start="blue", col.end="red",
+#'   col.pal=NULL, na.col="grey50",
+#'   breaks=10)
 values2colors <-
   function(
     x,

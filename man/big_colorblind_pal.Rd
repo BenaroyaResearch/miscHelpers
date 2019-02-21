@@ -4,10 +4,10 @@
 \alias{big_colorblind_pal}
 \title{Generate a large colorblind palette}
 \usage{
-\code{average_color(
-n_colors,
-shuffle_colors=FALSE,
-drop_yellow=TRUE, drop_black=FALSE)}
+big_colorblind_pal(
+  n_colors,
+  shuffle_colors=FALSE,
+  drop_yellow=TRUE, drop_black=FALSE)
 }
 \arguments{
 \item{n_colors}{integer, the number of colors in the palette. No default. Anything less than the number of colors in colorblind_pal (after dropping yellow and/or black) just returns the colorblind_pal colors.}

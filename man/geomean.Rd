@@ -4,7 +4,7 @@
 \alias{geomean}
 \title{Calculate the geometric mean of a numeric vector}
 \usage{
-\code{geomean(x, ...)}
+geomean(x, ...)
 }
 \arguments{
 \item{x}{numeric vector. All elements must be positive, or an error is thrown. Geometric mean is defined only where all elements are positive.}

@@ -4,8 +4,7 @@
 \alias{ls.objects}
 \title{Improved listing of objects (from Dirk Eddelbuettel)}
 \usage{
-\code{ls.objects(pos = 1, pattern, order.by,
- decreasing=FALSE, head=FALSE, n=5)}
+ls.objects(pos = 1, pattern, order.by, decreasing=FALSE, head=FALSE, n=5)
 }
 \description{
 This is an alternative to the base \code{ls} function, with additional functionality. Documentation to be written.

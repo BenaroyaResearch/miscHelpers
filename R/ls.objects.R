@@ -2,8 +2,8 @@
 #'
 #' This is an alternative to the base \code{ls} function, with additional functionality. Documentation to be written.
 #' @export
-#' @usage \code{ls.objects(pos = 1, pattern, order.by,
-#'  decreasing=FALSE, head=FALSE, n=5)}
+#' @usage
+#' ls.objects(pos = 1, pattern, order.by, decreasing=FALSE, head=FALSE, n=5)
 ls.objects <- function(pos = 1, pattern, order.by,
                         decreasing=FALSE, head=FALSE, n=5) {
   napply <- function(names, fn) sapply(names, function(x)

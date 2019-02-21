@@ -4,7 +4,7 @@
 \alias{sig_digs}
 \title{Calculate the number of significant figures in a number (borrowed from ???)}
 \usage{
-\code{sig_digs(n)}
+sig_digs(n)
 }
 \arguments{
 \item{n}{numeric, the number for which to determine significant figures.}

@@ -4,7 +4,7 @@
 \alias{standardize_names}
 \title{Standardize a character vector to standard syntax (deduplication copied from limma::makeUnique)}
 \usage{
-\code{standardize_names(x, dedup=TRUE)}
+standardize_names(x, dedup=TRUE)
 }
 \arguments{
 \item{x}{character vector with elements to be standardized}

@@ -4,8 +4,7 @@
 \alias{order_points}
 \title{Re-order a data frame for plotting points in ggplot}
 \usage{
-\code{
-order_points(x, method)}
+order_points(x, method)
 }
 \arguments{
 \item{x}{data frame containing data to re-order}

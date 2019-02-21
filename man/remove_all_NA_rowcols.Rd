@@ -4,7 +4,7 @@
 \alias{remove_all_NA_rowcols}
 \title{Trim any rows and/or columns containing all NAs from a matrix or data frame.}
 \usage{
-\code{remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, interpret_text=TRUE)}
+remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, interpret_text=TRUE)
 }
 \arguments{
 \item{x}{data frame or matrix with rows and/or columns to be removed}

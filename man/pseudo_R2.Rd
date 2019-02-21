@@ -4,7 +4,7 @@
 \alias{pseudo_R2}
 \title{Calculate a pseudo R^2 value from a fitted model}
 \usage{
-\code{pseudo_R2(x)}
+pseudo_R2(x)
 }
 \arguments{
 \item{x}{result from model fitting, generally the output of lm or lmer.}

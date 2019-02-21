@@ -9,7 +9,7 @@
 #' @param group_cols the names or numbers of the columns of \code{designMat} corresponding to the groups/studies. Values of the shuffled column are resampled WITHIN group/study
 #' @export
 #' @return a design matrix, with dimentions identical to the input \code{designMat}
-#' @usage \code{shuffle_designMat_by_group(designMat, shuffle_col, group_cols)}
+#' @usage shuffle_designMat_by_group(designMat, shuffle_col, group_cols)
 shuffle_designMat_by_group <- function(designMat, shuffle_col, group_cols) {
   designMat[rowSums(designMat[,group_cols])==0, shuffle_col] <-
     sample(designMat[rowSums(designMat[,group_cols])==0, shuffle_col])

@@ -4,10 +4,7 @@
 \alias{append_objectnames}
 \title{Append text to object names in the global environment}
 \usage{
-\code{
-append_objectnames(
-  objects, append_text,
-  sep="", ask=TRUE)}
+append_objectnames(objects, append_text, sep="", ask=TRUE, envir=.GlobalEnv)
 }
 \arguments{
 \item{objects}{character vector, the names of the objects for which to append text. Can be a call to \code{ls_grep}, which allows pattern matching.}
@@ -17,6 +14,8 @@ append_objectnames(
 \item{sep}{character string, text to place as separator between object names and appended text. Defaults to "".}
 
 \item{ask}{logical, whether to prompt the user before replacing objects. Defaults to TRUE.}
+
+\item{envir}{the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.}
 }
 \description{
 For a specified set of objects in the global environment, append text to the end of the object names. This is actually done by creating copies of the objects with new names and deleting the original versions, which may consume large amounts of memory if the objects are large. By default, the user is prompted before objects are renamed.

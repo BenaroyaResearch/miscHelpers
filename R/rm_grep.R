@@ -5,7 +5,7 @@
 #' @param ask logical, whether to prompt the user before removing objects. Defaults to TRUE.
 #' @param ... optional arguments passed to \code{grep}.
 #' @export
-#' @usage \code{rm_grep(rm_pattern, ask=TRUE, ...)}
+#' @usage rm_grep(rm_pattern, ask=TRUE, ...)
 rm_grep <- function(rm_pattern, ask=TRUE, ...) {
   vars_to_remove <- grep(rm_pattern, base::ls(envir=.GlobalEnv), value=TRUE, ...)
   if (ask) {

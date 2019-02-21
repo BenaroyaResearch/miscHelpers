@@ -4,7 +4,7 @@
 \alias{redundant_cols.model.matrix}
 \title{Determine the redundant columns in a model matrix}
 \usage{
-\code{redundant_cols.model.matrix(model_matrix)}
+redundant_cols.model.matrix(model_matrix)
 }
 \arguments{
 \item{model_matrix}{the model matrix, typically the result of a call to \code{model.matrix} or similar functions.}

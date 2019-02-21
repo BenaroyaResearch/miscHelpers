@@ -4,7 +4,7 @@
 \alias{rm_grep}
 \title{Remove objects matching a regex pattern from global environment}
 \usage{
-\code{rm_grep(rm_pattern, ask=TRUE, ...)}
+rm_grep(rm_pattern, ask=TRUE, ...)
 }
 \arguments{
 \item{rm_pattern}{character string, the regex pattern to match. Passed to \code{grep}.}

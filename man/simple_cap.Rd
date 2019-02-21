@@ -4,7 +4,7 @@
 \alias{simple_cap}
 \title{Capitalize the first letter of each element and/or word in a vector of character strings}
 \usage{
-\code{simple_cap(x, sep_str=" ")}
+simple_cap(x, sep_str=" ")
 }
 \arguments{
 \item{x}{character vector, with elements to be capitalized.}

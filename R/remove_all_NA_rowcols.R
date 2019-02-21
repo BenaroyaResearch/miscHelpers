@@ -9,7 +9,7 @@
 #' @param interpret_text whether to convert text "NA" to NA values. Default behavior is to set values that are read as "NA" to NA before filtering.
 #' @export
 #' @return an object of the same type as \code{x}, potentially with fewer rows and/or columns
-#' @usage \code{remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, interpret_text=TRUE)}
+#' @usage remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, interpret_text=TRUE)
 remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) {
   
   if (!is.data.frame(x) & !is.matrix(x))

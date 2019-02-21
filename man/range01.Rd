@@ -4,7 +4,7 @@
 \alias{range01}
 \title{Normalize a numeric vector to 0-1 range}
 \usage{
-\code{range01(x)}
+range01(x)
 }
 \arguments{
 \item{x}{numeric vector to be normalized}
