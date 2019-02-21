@@ -4,12 +4,14 @@
 \alias{rm_grep}
 \title{Remove objects matching a regex pattern from global environment}
 \usage{
-rm_grep(rm_pattern, ask=TRUE, ...)
+rm_grep(rm_pattern, ask=TRUE, envir=.GlobalEnv, ...)
 }
 \arguments{
 \item{rm_pattern}{character string, the regex pattern to match. Passed to \code{grep}.}
 
 \item{ask}{logical, whether to prompt the user before removing objects. Defaults to TRUE.}
+
+\item{envir}{the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.}
 
 \item{...}{optional arguments passed to \code{grep}.}
 }

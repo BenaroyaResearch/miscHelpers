@@ -4,10 +4,10 @@
 #' @param var_pattern character string, the regex pattern to match object names. Passed to \code{grep} via \code{ls_grep}.
 #' @param append character string, the text to be appended to the objects' names when making the copies. Defaults to ".old".
 #' @param ask logical, whether to prompt the user before copying objects. Defaults to TRUE.
-#' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.globalEnv}.
+#' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.
 #' @export
-#' @usage make_copies(var_pattern, append=".old", ask=TRUE, envir=.globalEnv)
-make_copies <- function(var_pattern, append=".old", ask=TRUE, envir=.globalEnv) {
+#' @usage make_copies(var_pattern, append=".old", ask=TRUE, envir=.GlobalEnv)
+make_copies <- function(var_pattern, append=".old", ask=TRUE, envir=.GlobalEnv) {
   vars_to_copy <- ls_grep(var_pattern)
   if (ask) {
     cat("About to copy the following objects with suffix '", append, "':\n\n", sep="")
