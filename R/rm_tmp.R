@@ -6,4 +6,4 @@
 #' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.
 #' @export
 #' @usage rm_tmp(..., envir=.GlobalEnv, ask=TRUE)
-rm_tmp <- function(..., ask=TRUE) rm_grep("^[a-zA-Z]$|\\.tmp", ask=ask, envir=envir, ...)
+rm_tmp <- function(..., envir=.GlobalEnv, ask=TRUE) rm_grep("^[a-zA-Z]$|\\.tmp", ask=ask, envir=envir, ...)
