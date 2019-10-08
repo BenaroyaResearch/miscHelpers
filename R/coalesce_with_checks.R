@@ -18,9 +18,9 @@ coalesce_with_checks <- function(x, columns) {
       "Function coalesce_with_checks requires at least two valid columns in input data frame")
   if (any(apply(x[,columns], MARGIN=1, function(x) length(unique(na.omit(x)))) > 1))
     stop(
-      paste0(
-        "Multiple non-NA values found in at least one row of annotation for the following columns: ",
-        paste(columns, sep=", ")))
+      paste(
+        "Multiple non-NA values found in at least one row of annotation for the following columns:",
+        paste(columns, collapse=", ")))
   
   columns_to_coalesce <- intersect(columns, colnames(x))
   if (!setequal(columns_to_coalesce, columns))

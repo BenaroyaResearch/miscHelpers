@@ -6,8 +6,6 @@
 #' In its current state, there are no parameters, and only default settings. Additional flexibility, 
 #' such as controlling the fields that are output, may be added in the future.
 #' @export
-#' @return
-#' @usage
 #' print_session_info()
 print_session_info <- function() {
   ses_info <- sessioninfo::session_info()
