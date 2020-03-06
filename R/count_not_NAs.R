@@ -5,4 +5,4 @@
 #' @export
 #' @return integer, the number of non-NA values in \code{x}
 #' @usage count_not_NAs(x)
-count_NAs <- function(x) sum(!is.na(x))
+count_not_NAs <- function(x) sum(!is.na(x))
