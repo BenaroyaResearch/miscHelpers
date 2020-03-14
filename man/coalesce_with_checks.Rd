@@ -10,6 +10,8 @@ coalesce_with_checks(x, columns)
 \item{x}{data frame containing the redundant columns to be coalesced/collapsed}
 
 \item{columns}{character vector, the names of the columns to be coalesced/collapsed. The values will be combined into the first column listed in \code{columns}, and the remaining columns will be dropped.}
+
+\item{tol}{numeric, the tolerance for assuming identity of floating-point numeric values. Defaults to the square route of the machine tolerance}
 }
 \value{
 A data frame with \code{columns} values collapsed into the first column listed.
