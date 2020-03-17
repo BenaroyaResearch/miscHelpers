@@ -4,12 +4,14 @@
 \alias{coerce_NA_text}
 \title{Coerce textual NAs to true NA values}
 \usage{
-coerce_NA_text(x, NA_values=c("NA", "na", "N/A", "n/a", "", "."), verbose=FALSE)
+coerce_NA_text(x, NA_values=c("NA", "na", "N/A", "n/a", "", "."), add_NA_values, verbose=FALSE)
 }
 \arguments{
 \item{x}{vector, matrix, or data frame containing the data to be coerced}
 
 \item{NA_values}{character vector, the values to be coerced to NAs.}
+
+\item{add_NA_values}{character vector, additional values (beyond \code{NA_values}) to coerce to NA. This argument simplifies keeping the default \code{NA_values} and adding one or more additional values to it}
 
 \item{verbose}{logical, whether to output information on data being coerced; if \code{x} is a data frame, the function will output the names of the columns with data being coerced.}
 }
