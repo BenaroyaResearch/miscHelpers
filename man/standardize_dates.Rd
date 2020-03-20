@@ -15,7 +15,5 @@ standardize_dates(x)
 A vector of the same length as \code{x}
 }
 \description{
-This function is designed to convert dates from a mix of formats to standard "Date" format.
-frames, data frame like objects (e.g. tibbles), or matrices. It returns an object of the same class.
-The values that will be coerced to NAs can be provided as a character vector.
+This function is designed to convert dates from a mix of formats to standard "Date" format. It can handle dates in POSIX, numeric, Date, or mixed character format.
 }
