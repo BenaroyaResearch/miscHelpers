@@ -29,36 +29,44 @@ standardize_dates <- function(x, origin="1899-12-30") {
 
     data_standardized <- as.Date(rep(NA, length(x)))
 
-    # transform data from numeric form
+    # transform data from numeric form in character vector
+    regex.tmp <- "\\d{5}"
     data_standardized[
       !is.na(x) &
-        str_detect(x, "\\d{5}")] <-
+        str_detect(x, regex.tmp)] <-
       as.Date(
         as.numeric(
           x[
             !is.na(x) &
-              str_detect(x, "\\d{5}")]),
+              str_detect(x, regex.tmp)]),
         origin = origin)
 
     # transform data from "YYYY-MM-DD" form
+    regex.tmp <- "\\d{4}\\-\\d{1,2}\\-\\d{1,2}"
+    date_format.tmp <- "%Y-%m-%d"
     data_standardized[
-      !is.na(x) &
-        str_detect(x, "\\d{4}\\-\\d{1,2}\\-\\d{1,2}")] <-
+      !is.na(x) & str_detect(x, regex.tmp)] <-
       as.Date(
-        x[
-          !is.na(x) &
-            str_detect(x, "\\d{4}\\-\\d{1,2}\\-\\d{1,2}")],
-        format = "%Y-%m-%d")
+        x[!is.na(x) & str_detect(x, regex.tmp)],
+        format = date_format.tmp)
 
     # transform data from "M/DD/YYYY" form
+    regex.tmp <- "\\d{1,2}\\/\\d{1,2}\\/\\d{4}"
+    date_format.tmp <- "%m/%d/%Y"
     data_standardized[
-      !is.na(x) &
-        str_detect(x, "\\d{1,2}\\/\\d{1,2}\\/\\d{4}")] <-
+      !is.na(x) & str_detect(x, regex.tmp)] <-
       as.Date(
-        x[
-          !is.na(x) &
-            str_detect(x, "\\d{1,2}\\/\\d{1,2}\\/\\d{4}")],
-        format="%m/%d/%Y")
+        x[!is.na(x) & str_detect(x, regex.tmp)],
+        format = date_format.tmp)
+
+    # transform data from "M/D/YY" form
+    regex.tmp <- "\\d{1,2}\\/\\d{1,2}\\/\\d{2}"
+    date_format.tmp <- "%m/%d/%y"
+    data_standardized[
+      !is.na(x) & str_detect(x, regex.tmp)] <-
+      as.Date(
+        x[!is.na(x) & str_detect(x, regex.tmp)],
+        format = date_format.tmp)
   }
 
   data_standardized
