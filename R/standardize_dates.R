@@ -67,6 +67,15 @@ standardize_dates <- function(x, origin="1899-12-30") {
       as.Date(
         x[!is.na(x) & str_detect(x, regex.tmp)],
         format = date_format.tmp)
+
+    # transform data from "YYYYMMDD" form
+    regex.tmp <- "\\d{8}"
+    date_format.tmp <- "%Y%M%D"
+    data_standardized[
+      !is.na(x) & str_detect(x, regex.tmp)] <-
+      as.Date(
+        x[!is.na(x) & str_detect(x, regex.tmp)],
+        format = date_format.tmp)
   }
 
   data_standardized
