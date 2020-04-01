@@ -13,10 +13,25 @@ standardize_dates <- function(x, origin="1899-12-30") {
     # keep simple Date format
     data_standardized <- x
 
-  } else if (inherits(x, "numeric")) {
+  } else if (inherits(x, "integer")) {
 
-    # transform from numeric
-    data_standardized <- as.Date(x, origin = origin)
+    data_standardized <- as.Date(rep(NA, length(x)))
+
+    # transform from numeric date type
+    regex.tmp <- "^\\d{5}$"
+    data_standardized[
+      !is.na(x) & str_detect(as.character(x), regex.tmp)] <-
+      as.Date(
+        x[!is.na(x) & str_detect(as.character(x), regex.tmp)], origin = origin)
+
+    # transform from numeric YYYYMMDD format
+    regex.tmp <- "^(19|20)\\d{2}[0-1]\\d[0-3]\\d$"
+    date_format.tmp <- "%Y%M%d"
+    data_standardized[
+      !is.na(x) & str_detect(as.character(x), regex.tmp)] <-
+      as.Date(
+        as.character(x[!is.na(x) & str_detect(as.character(x), regex.tmp)]),
+        format = date_format.tmp)
 
   } else if (inherits(x, "POSIXt")) {
 
@@ -70,13 +85,13 @@ standardize_dates <- function(x, origin="1899-12-30") {
 
     # transform data from "YYYYMMDD" form
     regex.tmp <- "^\\d{8}$"
-    date_format.tmp <- "%Y%M%D"
+    date_format.tmp <- "%Y%M%d"
     data_standardized[
       !is.na(x) & str_detect(x, regex.tmp)] <-
       as.Date(
         x[!is.na(x) & str_detect(x, regex.tmp)],
         format = date_format.tmp)
-  }
+  } else stop("No recognized date format found in input data")
 
   data_standardized
 }
