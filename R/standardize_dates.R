@@ -13,11 +13,11 @@ standardize_dates <- function(x, origin="1899-12-30") {
     # keep simple Date format
     data_standardized <- x
 
-  } else if (inherits(x, "integer")) {
+  } else if (inherits(x, "integer") | inherits(x, "numeric")) {
 
     data_standardized <- as.Date(rep(NA, length(x)))
 
-    # transform from numeric date type
+    # transform from numeric/integer date type
     regex.tmp <- "^\\d{5}$"
     data_standardized[
       !is.na(x) & str_detect(as.character(x), regex.tmp)] <-
