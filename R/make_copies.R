@@ -13,8 +13,8 @@ make_copies <- function(var_pattern, append=".old", ask=TRUE, envir=.GlobalEnv) 
     cat("About to copy the following objects with suffix '", append, "':\n\n", sep="")
     cat(vars_to_copy, sep = "\n")
     proceed <- read_yn("Do you want to proceed? (Enter y or n): ")
-    if (proceed == "n") 
+    if (proceed == "n")
       stop("Variables not replaced.")
   }
-  invisible(lapply(vars_to_copy, make_copy, envir))
+  invisible(lapply(vars_to_copy, make_copy, append=append, envir=envir))
 }
