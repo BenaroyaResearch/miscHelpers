@@ -11,19 +11,19 @@
 #' @return an object of the same type as \code{x}, potentially with fewer rows and/or columns
 #' @usage remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, interpret_text=TRUE)
 remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) {
-  
+
   if (!is.data.frame(x) & !is.matrix(x))
     stop("Input object type not recognized. This function is for use on data frames and matrices.")
-  
+
   if (nrow(x)==0 | ncol(x)==0) {
     cat("Input object has 0 rows or 0 columns; returning as is\n")
     return(x)
   }
-  
+
   if (interpret_text)
     for (i in 1:ncol(x))
-      x[x[,i] %in% "NA",i] <- NA
-  
+      x[x[[i]]%in% "NA", i] <- NA
+
   if (cols) {
     keep_cols <-
       apply(x, MARGIN=2, function(x) {sum(!is.na(x))}) > 0
@@ -31,12 +31,12 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) 
     x <- x[,keep_cols]
     colnames(x) <- colnames.orig # necessary to avoid deduplicating column names
   }
-  
+
   if (rows) {
     keep_rows <-
       apply(x, MARGIN=1, function(x) {sum(!is.na(x))}) > 0
     x <- x[keep_rows,]
   }
-  
+
   x
 }
