@@ -3,10 +3,11 @@
 #' This function is designed to convert dates from a mix of formats to standard "Date" format. It can handle dates in POSIX, numeric, Date, or mixed character format.
 #' @param x vector, the date data to be converted
 #' @param origin character, the base date for numeric date format, in the form "YYYY-MM-DD". Defaults to "1899-12-30".
+#' @param tz character, the time zone to be used if converting from POSIX formats. Defaults to PDT, as this package was written for use in a Seattle-based analysis group, and PDT covers more of the year than PST. This affects both the assumed time zone for any dates in character class with "YYYY-MM-DD hh:mm:ss" format, and the time zone used when converting from dateTime format to date alone.
 #' @export
 #' @return A vector of the same length as \code{x}
 #' @usage standardize_dates(x)
-standardize_dates <- function(x, origin="1899-12-30") {
+standardize_dates <- function(x, origin="1899-12-30", tz=Sys.timezone()) {
 
   if (inherits(x, "Date")) {
 
@@ -36,7 +37,7 @@ standardize_dates <- function(x, origin="1899-12-30") {
   } else if (inherits(x, "POSIXt")) {
 
     # transform from POSIX
-    data_standardized <- as.Date(x)
+    data_standardized <- as.Date(x, tz = tz)
 
   } else if (inherits(x, "character")) {
 
@@ -91,6 +92,17 @@ standardize_dates <- function(x, origin="1899-12-30") {
       as.Date(
         x[!is.na(x) & str_detect(x, regex.tmp)],
         format = date_format.tmp)
+
+    # transform data from POSIX text form "YYYY-MM-DD hh:mm:ss"
+    regex.tmp <- "^\\d{4}\\-\\d{1,2}\\-\\d{1,2} \\d{2}\\:\\d{1,2}\\:\\d{1,2}$"
+    data_standardized[
+      !is.na(x) & str_detect(x, regex.tmp)] <-
+      as.Date.POSIXct(
+        as.POSIXct(
+          x[!is.na(x) & str_detect(x, regex.tmp)],
+          tz = tz),
+        tz = tz
+      )
   } else stop("No recognized date format found in input data")
 
   data_standardized
