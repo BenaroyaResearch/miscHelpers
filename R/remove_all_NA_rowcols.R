@@ -22,7 +22,7 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) 
 
   if (interpret_text)
     for (i in 1:ncol(x))
-      x[x[[i]]%in% "NA", i] <- NA
+      x[x[[i]] %in% "NA", i, drop=TRUE] <- NA
 
   if (cols) {
     keep_cols <-
