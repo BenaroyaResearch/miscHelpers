@@ -20,9 +20,10 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) 
     return(x)
   }
 
+  # this step has been repeatedly modified to handle tibbles and data frames
   if (interpret_text)
     for (i in 1:ncol(x))
-      x[x[[i]] %in% "NA", i, drop=TRUE] <- NA
+      for (i in 1:ncol(x)) x[[i]][x[[i]] %in% "NA"] <- NA
 
   if (cols) {
     keep_cols <-
