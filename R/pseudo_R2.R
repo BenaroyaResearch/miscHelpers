@@ -2,6 +2,7 @@
 #'
 #' Calculate the squared correlation of the fitted and observed values for the dependent variable, as a pseudo-R^2. Inputs can be models fit by lmer or lm (other formats to be incorporated later).
 #' @param x result from model fitting, generally the output of lm or lmer.
+#' @importFrom stats cor fitted
 #' @export
 #' @return numeric, the squared correlation of the fitted values and the observed values of the dependent variable
 #' @usage pseudo_R2(x)

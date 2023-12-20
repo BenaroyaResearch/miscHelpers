@@ -4,7 +4,7 @@
 \alias{se}
 \title{Calculate the standard error of the mean}
 \usage{
-se(x, na.rm=FALSE)
+se(x, na.rm = FALSE)
 }
 \arguments{
 \item{x}{numeric vector or matrix}

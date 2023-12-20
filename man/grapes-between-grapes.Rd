@@ -6,7 +6,7 @@
 \usage{
 x \%between\% rng
 
-`\%between\%`(x, rng, inc_bounds=FALSE)
+`\%between\%`(x, rng, inc_bounds = FALSE)
 }
 \arguments{
 \item{x}{numeric vector to be tested.}

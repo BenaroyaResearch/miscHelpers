@@ -5,5 +5,7 @@
 #' @param ask logical, whether to prompt the user before removing objects. Defaults to TRUE.
 #' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.
 #' @export
-#' @usage rm_tmp(..., envir=.GlobalEnv, ask=TRUE)
-rm_tmp <- function(..., envir=.GlobalEnv, ask=TRUE) rm_grep("^[a-zA-Z]$|\\.tmp", ask=ask, envir=envir, ...)
+#' @usage rm_tmp(..., envir = .GlobalEnv, ask = TRUE)
+rm_tmp <- 
+  function(..., envir = .GlobalEnv, ask = TRUE)
+    rm_grep("^[a-zA-Z]$|\\.tmp", ask = ask, envir = envir, ...)

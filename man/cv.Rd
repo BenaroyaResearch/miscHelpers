@@ -4,7 +4,7 @@
 \alias{cv}
 \title{Calculate the coefficient of variation}
 \usage{
-cv(x, na.rm=FALSE)
+cv(x, na.rm = FALSE)
 }
 \arguments{
 \item{x}{numeric vector or matrix}

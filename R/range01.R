@@ -5,4 +5,6 @@
 #' @param x numeric vector to be normalized
 #' @export
 #' @usage range01(x)
-range01 <- function(x)((x-min(x, na.rm=TRUE))/(max(x, na.rm=TRUE)-min(x, na.rm=TRUE)))
+range01 <- 
+  function(x) ((x - min(x, na.rm = TRUE)) / 
+                 (max(x, na.rm = TRUE) - min(x, na.rm = TRUE)))

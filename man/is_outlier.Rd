@@ -4,7 +4,7 @@
 \alias{is_outlier}
 \title{Determine outliers}
 \usage{
-is_outlier(x, na.rm=FALSE)
+is_outlier(x, na.rm = FALSE)
 }
 \arguments{
 \item{x}{numeric vector containing values to test for outliers}

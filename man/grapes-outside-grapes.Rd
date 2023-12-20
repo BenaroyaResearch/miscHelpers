@@ -6,7 +6,7 @@
 \usage{
 x \%outside\% rng
 
-`\%outside\%`(x, rng, inc_bounds=FALSE)
+`\%outside\%`(x, rng, inc_bounds = FALSE)
 }
 \arguments{
 \item{x}{numeric vector to be tested.}

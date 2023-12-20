@@ -9,18 +9,22 @@
 #' @param verbose logical, whether to output information on data being coerced; if \code{x} is a data frame, the function will output the names of the columns with data being coerced.
 #' @export
 #' @return An object of the same type as the input data
-#' @usage coerce_NA_text(x, NA_values=c("NA", "na", "N/A", "n/a", "", "."), add_NA_values, verbose=FALSE)
+#' @usage coerce_NA_text(
+#'   x, NA_values = c("NA", "na", "N/A", "n/a", "", "."), 
+#'   add_NA_values, verbose = FALSE)
 
-coerce_NA_text <- function(x, NA_values=c("NA", "na", "N/A", "n/a", "", "."), add_NA_values=NULL, verbose=FALSE) {
-  if (!is.null(add_NA_values)) NA_values <- union(NA_values, add_NA_values)
-  if (is.vector(x) | is.matrix(x)) {
-    x[x %in% NA_values] <- NA
-  } else if (inherits(x, "data.frame")) {
-    for (col.tmp in 1:ncol(x))
-      if (any(x[[col.tmp]] %in% NA_values)) {
-        x[[col.tmp]][x[[col.tmp]] %in% NA_values] <- NA
-        if (verbose) print(paste("Coerced textual NAs to true NAs for column", colnames(x)[col.tmp]))
-      }
-  } else stop("Input data object must be a vector, data frame")
-  x
-}
+coerce_NA_text <- 
+  function(x, NA_values = c("NA", "na", "N/A", "n/a", "", "."), 
+           add_NA_values = NULL, verbose = FALSE) {
+    if (!is.null(add_NA_values)) NA_values <- union(NA_values, add_NA_values)
+    if (is.vector(x) | is.matrix(x)) {
+      x[x %in% NA_values] <- NA
+    } else if (inherits(x, "data.frame")) {
+      for (col.tmp in 1:ncol(x))
+        if (any(x[[col.tmp]] %in% NA_values)) {
+          x[[col.tmp]][x[[col.tmp]] %in% NA_values] <- NA
+          if (verbose) print(paste("Coerced textual NAs to true NAs for column", colnames(x)[col.tmp]))
+        }
+    } else stop("Input data object must be a vector, data frame")
+    x
+  }

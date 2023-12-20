@@ -4,7 +4,21 @@
 \alias{ls.objects}
 \title{Improved listing of objects (from Dirk Eddelbuettel)}
 \usage{
-ls.objects(pos = 1, pattern, order.by, decreasing=FALSE, head=FALSE, n=5)
+ls.objects(
+  pos = 1, pattern, order.by, decreasing = FALSE, head = FALSE, n = 5)
+}
+\arguments{
+\item{pos}{numeric, position in search path}
+
+\item{pattern}{character, pattern argument passed to \code{ls}}
+
+\item{order.by}{character, order by this column (optional)}
+
+\item{decreasing}{logical, order in decreasing order by \code{order.by} (optional, and ignored if \code{order.by} is not specified)}
+
+\item{head}{logical, only show the first few rows (optional)}
+
+\item{n}{numeric, number of rows to show (optional, and ignored if \code{head} is not specified)}
 }
 \description{
 This is an alternative to the base \code{ls} function, with additional functionality. Documentation to be written.

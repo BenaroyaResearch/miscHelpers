@@ -10,11 +10,13 @@
 #' @export
 #' @return a design matrix, with dimentions identical to the input \code{designMat}
 #' @usage shuffle_designMat_by_group(designMat, shuffle_col, group_cols)
-shuffle_designMat_by_group <- function(designMat, shuffle_col, group_cols) {
-  designMat[rowSums(designMat[,group_cols])==0, shuffle_col] <-
-    sample(designMat[rowSums(designMat[,group_cols])==0, shuffle_col])
-  for (i in group_cols) {
-    designMat[designMat[,i]==1, shuffle_col] <- sample(designMat[designMat[,i]==1, shuffle_col])
-  }
-  return(designMat)
+shuffle_designMat_by_group <- 
+  function(designMat, shuffle_col, group_cols) {
+    designMat[rowSums(designMat[, group_cols]) == 0, shuffle_col] <-
+      sample(designMat[rowSums(designMat[, group_cols]) == 0, shuffle_col])
+    for (i in group_cols) {
+      designMat[designMat[, i] == 1, shuffle_col] <- 
+        sample(designMat[designMat[,i] == 1, shuffle_col])
+    }
+    return(designMat)
 }

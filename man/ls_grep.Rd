@@ -4,7 +4,7 @@
 \alias{ls_grep}
 \title{List objects in global environment matching a regex pattern}
 \usage{
-ls_grep(pattern, value=TRUE, envir=.GlobalEnv, ...)
+ls_grep(pattern, value = TRUE, envir = .GlobalEnv, ...)
 }
 \arguments{
 \item{pattern}{character string, the regex pattern to match. Passed to \code{grep}.}

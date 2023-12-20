@@ -9,8 +9,8 @@
 #' @usage
 #' x \%outside\% rng
 #'
-#' `\%outside\%`(x, rng, inc_bounds=FALSE)
-"%outside%" <- function(x, rng, inc_bounds=FALSE) {
-  if (inc_bounds) {x<=rng[1] | x>=rng[2]
-  } else {x<rng[1] | x>rng[2]}
+#' `\%outside\%`(x, rng, inc_bounds = FALSE)
+"%outside%" <- function(x, rng, inc_bounds = FALSE) {
+  if (inc_bounds) {x <= rng[1] | x >= rng[2]
+  } else {x < rng[1] | x > rng[2]}
 }

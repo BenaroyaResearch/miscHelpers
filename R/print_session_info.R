@@ -5,6 +5,10 @@
 #' the output context. In particular, this function works much better with knitr output to html or pdf.
 #' In its current state, there are no parameters, and only default settings. Additional flexibility,
 #' such as controlling the fields that are output, may be added in the future.
+#' @importFrom sessioninfo session_info
+#' @importFrom kableExtra kable_styling
+#' @importFrom dplyr select
+#' @importFrom knitr kable
 #' @export
 #' @usage print_session_info()
 print_session_info <- function() {
@@ -12,6 +16,6 @@ print_session_info <- function() {
   print(ses_info$platform)
   kableExtra::kable_styling(
     knitr::kable(
-      dplyr::select(ses_info$packages, package, version=loadedversion, date, source),
-      row.names=FALSE))
+      dplyr::select(ses_info$packages, package, version = loadedversion, date, source),
+      row.names = FALSE))
 }

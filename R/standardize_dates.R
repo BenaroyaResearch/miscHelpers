@@ -6,8 +6,8 @@
 #' @param tz character, the time zone to be used if converting from POSIX formats. Defaults to PDT, as this package was written for use in a Seattle-based analysis group, and PDT covers more of the year than PST. This affects both the assumed time zone for any dates in character class with "YYYY-MM-DD hh:mm:ss" format, and the time zone used when converting from dateTime format to date alone.
 #' @export
 #' @return A vector of the same length as \code{x}
-#' @usage standardize_dates(x)
-standardize_dates <- function(x, origin="1899-12-30", tz=Sys.timezone()) {
+#' @usage standardize_dates(x, origin = "1899-12-30", tz = Sys.timezone())
+standardize_dates <- function(x, origin = "1899-12-30", tz = Sys.timezone()) {
 
   if (inherits(x, "Date")) {
 

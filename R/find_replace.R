@@ -8,8 +8,11 @@
 #' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.
 #' @importFrom stringr str_replace
 #' @export
-#' @usage find_replace(pattern, replace, pattern_find=NULL, ask=TRUE, envir=.GlobalEnv)
-find_replace <- function(pattern, replace, pattern_find=NULL, ask=TRUE, envir=.GlobalEnv) {
+#' @usage 
+#' find_replace(
+#'   pattern, replace, pattern_find = NULL, ask = TRUE, envir = .GlobalEnv)
+find_replace <- 
+  function(pattern, replace, pattern_find = NULL, ask = TRUE, envir = .GlobalEnv) {
   if (is.null(pattern_find)) pattern_find <- pattern
   vars_to_replace <- ls_grep(pattern_find)
   if (ask) {
@@ -20,8 +23,8 @@ find_replace <- function(pattern, replace, pattern_find=NULL, ask=TRUE, envir=.G
       stop("Variables not replaced.")
   }
   for (i in vars_to_replace) {
-    assign(str_replace(i, pattern, replace), get(i, envir=envir), envir=envir)
-    rm(list=i, envir=envir)
+    assign(str_replace(i, pattern, replace), get(i, envir = envir), envir = envir)
+    rm(list = i, envir = envir)
   }
 }
 

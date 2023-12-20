@@ -9,13 +9,15 @@
 #' @param interpret_text whether to convert text "NA" to NA values. Default behavior is to set values that are read as "NA" to NA before filtering.
 #' @export
 #' @return an object of the same type as \code{x}, potentially with fewer rows and/or columns
-#' @usage remove_all_NA_rowcols(x, cols=TRUE, rows=TRUE, interpret_text=TRUE)
-remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) {
+#' @usage 
+#' remove_all_NA_rowcols(
+#'   x, cols = TRUE, rows = TRUE, interpret_text = TRUE)
+remove_all_NA_rowcols <- function(x, cols = TRUE, rows = TRUE, interpret_text = TRUE) {
 
   if (!is.data.frame(x) & !is.matrix(x))
     stop("Input object type not recognized. This function is for use on data frames and matrices.")
 
-  if (nrow(x)==0 | ncol(x)==0) {
+  if (nrow(x) == 0 | ncol(x) == 0) {
     cat("Input object has 0 rows or 0 columns; returning as is\n")
     return(x)
   }
@@ -27,7 +29,7 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) 
 
   if (cols) {
     keep_cols <-
-      apply(x, MARGIN=2, function(x) {sum(!is.na(x))}) > 0
+      apply(x, MARGIN = 2, function(x) {sum(!is.na(x))}) > 0
     colnames.orig <- colnames(x)[keep_cols] # necessary to avoid deduplicating column names
     x <- x[,keep_cols]
     colnames(x) <- colnames.orig # necessary to avoid deduplicating column names
@@ -35,7 +37,7 @@ remove_all_NA_rowcols <- function(x, cols=TRUE, rows=TRUE, interpret_text=TRUE) 
 
   if (rows) {
     keep_rows <-
-      apply(x, MARGIN=1, function(x) {sum(!is.na(x))}) > 0
+      apply(x, MARGIN = 1, function(x) {sum(!is.na(x))}) > 0
     x <- x[keep_rows,]
   }
 

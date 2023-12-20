@@ -5,15 +5,17 @@
 #' @param shuffle_colors logical, whether to shuffle the palette order. Defaults to FALSE.
 #' @param drop_yellow logical, whether to drop the difficult-to-see yellow color. Defaults to TRUE.
 #' @param drop_black logical, whether to drop the black from the palette. Defaults to FALSE.
+#' @importFrom grDevices colorRampPalette
+#' @importFrom ggthemes colorblind_pal
 #' @export
 #' @return a character vector with the colors
 #' @usage
 #' big_colorblind_pal(
 #'   n_colors,
-#'   shuffle_colors=FALSE,
-#'   drop_yellow=TRUE, drop_black=FALSE)
+#'   shuffle_colors = FALSE,
+#'   drop_yellow = TRUE, drop_black = FALSE)
 big_colorblind_pal <-
-  function(n_colors, shuffle_colors=FALSE, drop_yellow=TRUE, drop_black=FALSE) {
+  function(n_colors, shuffle_colors = FALSE, drop_yellow = TRUE, drop_black = FALSE) {
     pal.start <- ggthemes::colorblind_pal()(8)
     if (drop_yellow) pal.start <- pal.start[-5]
     if (drop_black) pal.start <- pal.start[-1]

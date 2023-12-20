@@ -5,9 +5,9 @@
 \title{Convert a vector of numeric values to a vector of colors}
 \usage{
 values2colors(x,
-  col.start="blue", col.end="red",
-  col.pal=NULL, na.col="grey50",
-  breaks=10)
+  col.start = "blue", col.end = "red",
+  col.pal = NULL, na.col = "grey50",
+  breaks = 10)
 }
 \arguments{
 \item{x}{numeric vector containing values to be converted to colors}

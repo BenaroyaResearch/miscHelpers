@@ -4,7 +4,7 @@
 \alias{coalesce_with_checks}
 \title{Collapse multiple redundant columns into a single column}
 \usage{
-coalesce_with_checks(x, columns)
+coalesce_with_checks(x, columns, tol = .Machine$double.eps^0.5)
 }
 \arguments{
 \item{x}{data frame containing the redundant columns to be coalesced/collapsed}

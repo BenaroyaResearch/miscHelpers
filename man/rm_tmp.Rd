@@ -4,7 +4,7 @@
 \alias{rm_tmp}
 \title{Remove temporary objects from global environment}
 \usage{
-rm_tmp(..., envir=.GlobalEnv, ask=TRUE)
+rm_tmp(..., envir = .GlobalEnv, ask = TRUE)
 }
 \arguments{
 \item{...}{optional arguments passed to \code{grep} via \code{rm_grep}.}

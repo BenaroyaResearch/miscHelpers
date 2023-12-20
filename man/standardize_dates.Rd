@@ -4,7 +4,7 @@
 \alias{standardize_dates}
 \title{Convert dates in various formats to Date format}
 \usage{
-standardize_dates(x)
+standardize_dates(x, origin = "1899-12-30", tz = Sys.timezone())
 }
 \arguments{
 \item{x}{vector, the date data to be converted}

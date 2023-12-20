@@ -4,7 +4,8 @@
 \alias{find_replace}
 \title{Find and replace text in object names in the global environment}
 \usage{
-find_replace(pattern, replace, pattern_find=NULL, ask=TRUE, envir=.GlobalEnv)
+find_replace(
+  pattern, replace, pattern_find = NULL, ask = TRUE, envir = .GlobalEnv)
 }
 \arguments{
 \item{pattern}{character string, the regex pattern to replace. Passed to \code{grep} via \code{ls_grep}.}

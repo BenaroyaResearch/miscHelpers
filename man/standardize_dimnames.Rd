@@ -2,9 +2,10 @@
 % Please edit documentation in R/standardize_dimnames.R
 \name{standardize_dimnames}
 \alias{standardize_dimnames}
-\title{Standardize the column and/or row names of a matrix or data frame to standard syntax}
+\title{Standardize the column and/or row names of a matrix or data frame to standard syntax, defaulting to snake_case}
 \usage{
-standardize_dimnames(x, cols=TRUE, rows=FALSE, dedup=TRUE)
+standardize_dimnames(
+  x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "snake")
 }
 \arguments{
 \item{x}{data frame or matrix with column and/or row names to be standardized}
@@ -19,7 +20,7 @@ an object of the same type and dimension as \code{x}
 \description{
 Standardize column and/or row names of a matrix or data frame to a standard syntax. This is a wrapper for
 \code{standardize_names}, to allow it to be used on data frames and matrices, rather than on their
-names. All letters are converted to lowercase, special characters are converted to underscores,
+names. All letters are converted to lowercase, special characters are converted to underscores (snake_case) or removed (camelCase),
 and multiple and trailing (but not leading) special characters are removed. By default, elements are
-deduplicated by appending "_1" and so on.
+deduplicated by appending "_1" (snake_case) or "1" (camelCase) and so on.
 }

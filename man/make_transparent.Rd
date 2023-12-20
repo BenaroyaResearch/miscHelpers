@@ -4,7 +4,7 @@
 \alias{make_transparent}
 \title{Add transparency to a vector of colors}
 \usage{
-make_transparent(color_names, alpha=100)
+make_transparent(color_names, alpha = 100)
 }
 \arguments{
 \item{color_names}{vector of color names to be modified.}

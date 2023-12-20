@@ -4,7 +4,8 @@
 \alias{append_objectnames}
 \title{Append text to object names in the global environment}
 \usage{
-append_objectnames(objects, append_text, sep="", ask=TRUE, envir=.GlobalEnv)
+append_objectnames(
+  objects, append_text, sep = "", ask = TRUE, envir = .GlobalEnv)
 }
 \arguments{
 \item{objects}{character vector, the names of the objects for which to append text. Can be a call to \code{ls_grep}, which allows pattern matching.}

@@ -4,7 +4,7 @@
 \alias{me_labeller}
 \title{Labeller function for plotting WGCNA modules in facet_grid or facet_wrap}
 \usage{
-ggplot2::facet_grid(.~variable, labeller=me_labeller)
+me_labeller(variable, value)
 }
 \arguments{
 \item{variable}{not used by this function. Included for compatibility with \code{facet_grid} and \code{facet_wrap}.}
@@ -18,4 +18,7 @@ An object of the same dimension as \code{value}, with any "ME" strings removed f
 This is a function to pass facet labels to ggplot functions \code{facet_grid} and \code{facet_wrap},
 so that the facets have the module color name as the label. Basically, it strips off the "ME" and
 returns the label in a format that ggplot understands.
+}
+\details{
+This function is intended to be used in faceting with \code{facet_grid} or \code{facet_wrap}, as follows: \code{facet_grid(. ~ module, labeller = me_labeller)}.
 }

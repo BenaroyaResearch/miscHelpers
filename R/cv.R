@@ -5,9 +5,10 @@
 #' values by 100.
 #' @param x numeric vector or matrix
 #' @param na.rm logical. Should missing values be removed?
+#' @importFrom stats sd
 #' @export
 #' @return a single numeric value
-#' @usage cv(x, na.rm=FALSE)
-cv <- function(x, na.rm=FALSE) {
-  sd(x, na.rm=na.rm) / mean(x, na.rm=na.rm)
+#' @usage cv(x, na.rm = FALSE)
+cv <- function(x, na.rm = FALSE) {
+  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)
 }

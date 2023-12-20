@@ -6,8 +6,8 @@
 \usage{
 big_colorblind_pal(
   n_colors,
-  shuffle_colors=FALSE,
-  drop_yellow=TRUE, drop_black=FALSE)
+  shuffle_colors = FALSE,
+  drop_yellow = TRUE, drop_black = FALSE)
 }
 \arguments{
 \item{n_colors}{integer, the number of colors in the palette. No default. Anything less than the number of colors in colorblind_pal (after dropping yellow and/or black) just returns the colorblind_pal colors.}

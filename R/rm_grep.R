@@ -6,14 +6,14 @@
 #' @param envir the name of the environment in which to make the changes. Defaults to the global environment, \code{.GlobalEnv}.
 #' @param ... optional arguments passed to \code{grep}.
 #' @export
-#' @usage rm_grep(rm_pattern, ask=TRUE, envir=.GlobalEnv, ...)
-rm_grep <- function(rm_pattern, ask=TRUE, envir=.GlobalEnv, ...) {
-  vars_to_remove <- grep(rm_pattern, base::ls(envir=envir), value=TRUE, ...)
+#' @usage rm_grep(rm_pattern, ask = TRUE, envir = .GlobalEnv, ...)
+rm_grep <- function(rm_pattern, ask = TRUE, envir = .GlobalEnv, ...) {
+  vars_to_remove <- grep(rm_pattern, base::ls(envir = envir), value = TRUE, ...)
   if (ask) {
     cat("About to remove the following objects:\n\n")
-    cat(vars_to_remove, sep="\n")
+    cat(vars_to_remove, sep = "\n")
     proceed <- read_yn("Do you want to proceed? (Enter y or n): ")
     if (proceed == "n") stop("Variables not removed.")
   }
-  rm(list=vars_to_remove, envir=envir)
+  rm(list = vars_to_remove, envir = envir)
 }

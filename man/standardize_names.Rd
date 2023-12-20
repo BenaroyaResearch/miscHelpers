@@ -4,16 +4,18 @@
 \alias{standardize_names}
 \title{Standardize a character vector to standard syntax (deduplication copied from limma::makeUnique)}
 \usage{
-standardize_names(x, dedup=TRUE)
+standardize_names(x, dedup = TRUE, case = "snake")
 }
 \arguments{
 \item{x}{character vector with elements to be standardized}
 
 \item{dedup}{logical, whether to deduplicate the vector elements. If TRUE, elements that are identical after standardization are deduplicated by appending "_1", "_2", etc. Defaults to TRUE.}
+
+\item{case}{character, whether to standardize to "snake" or "camel" case. Defaults to "snake".}
 }
 \value{
 a character vector of the same length as \code{x}
 }
 \description{
-Standardize all elements of a character vector to the same syntax. All letters are converted to lowercase, special characters are converted to underscores, and multiple and trailing (but not leading) special characters are removed. By default, elements are deduplicated by appending "_1" and so on.
+Standardize all elements of a character vector to the same syntax. All letters are converted to lowercase, special characters are converted to underscores (snake_case) or removed (camelCase), and multiple and trailing (but not leading) special characters are removed. By default, elements are deduplicated by appending "_1" (snake_case) or "1" (camelCase) and so on.
 }

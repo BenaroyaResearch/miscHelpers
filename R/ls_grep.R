@@ -7,7 +7,7 @@
 #' @param ... optional arguments passed to \code{grep}.
 #' @export
 #' @return a vector of character names or numeric positions for the matches.
-#' @usage ls_grep(pattern, value=TRUE, envir=.GlobalEnv, ...)
-ls_grep <- function(pattern, value=TRUE, envir=.GlobalEnv, ...) {
-  grep(pattern=pattern, x=base::ls(envir=envir), value=value, ...)
+#' @usage ls_grep(pattern, value = TRUE, envir = .GlobalEnv, ...)
+ls_grep <- function(pattern, value = TRUE, envir = .GlobalEnv, ...) {
+  grep(pattern = pattern, x = base::ls(envir = envir), value = value, ...)
 }

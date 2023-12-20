@@ -4,7 +4,9 @@
 \alias{coerce_NA_text}
 \title{Coerce textual NAs to true NA values}
 \usage{
-coerce_NA_text(x, NA_values=c("NA", "na", "N/A", "n/a", "", "."), add_NA_values, verbose=FALSE)
+coerce_NA_text(
+  x, NA_values = c("NA", "na", "N/A", "n/a", "", "."), 
+  add_NA_values, verbose = FALSE)
 }
 \arguments{
 \item{x}{vector, matrix, or data frame containing the data to be coerced}

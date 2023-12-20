@@ -9,8 +9,8 @@
 #' @usage
 #' x \%between\% rng
 #' 
-#' `\%between\%`(x, rng, inc_bounds=FALSE)
-"%between%" <- function(x, rng, inc_bounds=FALSE) {
-  if (inc_bounds) {x>=rng[1] & x<=rng[2]
-  } else {x>rng[1] & x<rng[2]}
+#' `\%between\%`(x, rng, inc_bounds = FALSE)
+"%between%" <- function(x, rng, inc_bounds = FALSE) {
+  if (inc_bounds) {x >= rng[1] & x <= rng[2]
+  } else {x > rng[1] & x < rng[2]}
 }
