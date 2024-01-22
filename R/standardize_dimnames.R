@@ -8,13 +8,15 @@
 #' @param x data frame or matrix with column and/or row names to be standardized
 #' @param cols,rows logical, whether to standardize the column and row names, respectively. By default, column names are standardized, but row names are not.
 #' @param dedup logical, whether to deduplicate the vector elements. If TRUE, elements that are identical after standardization are deduplicated by appending "_1", "_2", etc. Defaults to TRUE.
+#' @param case character, specifying whether to convert to snake_case or camelCase. Abbreviations are accepted. Defaults to snake_case.
 #' @import stringr
 #' @export
 #' @return an object of the same type and dimension as \code{x}
 #' @usage standardize_dimnames(
-#'   x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "snake")
+#'   x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "snake_case")
 standardize_dimnames <- 
-  function(x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "snake") {
+  function(x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "snake_case") {
+    case = match.arg(case, c("snake_case", "camelCase"))
     if (!is.data.frame(x) & !is.matrix(x))
       stop("Input object type not recognized. This function is for use on data frames and matrices.")
     if (cols)
@@ -34,12 +36,13 @@ standardize_dimnames <-
 #' @param x data frame or matrix with column and/or row names to be standardized
 #' @param cols,rows logical, whether to standardize the column and row names, respectively. By default, column names are standardized, but row names are not.
 #' @param dedup logical, whether to deduplicate the vector elements. If TRUE, elements that are identical after standardization are deduplicated by appending "_1", "_2", etc. Defaults to TRUE.
+#' @param case character, specifying whether to convert to camelCase or snake_case. Abbreviations are accepted. Defaults to camelCase.
 #' @import stringr
 #' @export
 #' @return an object of the same type and dimension as \code{x}
 #' @usage standardizeDimnames(
-#'   x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "camel")
+#'   x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "camelCase")
 standardizeDimnames <- 
-  function(x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "camel") {
+  function(x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "camelCase") {
     standardize_dimnames(x, cols = cols, rows = rows, dedup = dedup, case = case)
   }

@@ -7,7 +7,7 @@
 #' @param x numeric vector to be normalized
 #' @param threshold the maximum absolute value to which the vector will be winsorized
 #' @export
-#' @usage range01(x, threshold = 3)
+#' @usage zscore_winsorized(x, threshold = 3)
 zscore_winsorized <- function(x, threshold = 3) {
   x <- scale(x)[,1]
   x[x > threshold] <- threshold

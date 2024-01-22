@@ -1,6 +1,6 @@
 Package: miscHelpers
 Title: Miscellaneous helper functions
-Version: 0.0.0.9010
+Version: 0.0.0.9011
 Authors@R: person("Matthew", "Dufort", email = "matt.dufort@gmail.com", role = c("aut", "cre"))
 Description: This package collects useful helper functions that don't have any
     other obvious home. Documentation is a work in progress.

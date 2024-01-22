@@ -4,18 +4,18 @@
 \alias{standardizeNames}
 \title{Standardize a character vector to standard syntax, defaulting to camelCase}
 \usage{
-standardizeNames(x, dedup = TRUE, case = "camel")
+standardizeNames(x, dedup = TRUE, case = "camelCase")
 }
 \arguments{
 \item{x}{character vector with elements to be standardized}
 
 \item{dedup}{logical, whether to deduplicate the vector elements. If TRUE, elements that are identical after standardization are deduplicated by appending "_1", "_2", etc. Defaults to TRUE.}
 
-\item{case}{character, whether to standardize to "snake" or "camel" case. Defaults to "camel".}
+\item{case}{character, whether to standardize to "camelCase" or "snake_case" case. Defaults to "camelCase". Partial matches are okay.}
 }
 \value{
 a character vector of the same length as \code{x}
 }
 \description{
-A synonym for \code{standardize_names}, but with \code{case} set to "camel" by default. Standardize all elements of a character vector to the same syntax. All letters are converted to lowercase, special characters are converted to underscores (snake_case) or removed (camelCase), and multiple and trailing (but not leading) special characters are removed. By default, elements are deduplicated by appending "_1" (snake_case) or "1" (camelCase) and so on.
+A synonym for \code{standardize_names}, but with \code{case} set to "camelCase" by default. Standardize all elements of a character vector to the same syntax. All letters are converted to lowercase, special characters are converted to underscores (snake_case) or removed (camelCase), and multiple and trailing (but not leading) special characters are removed. By default, elements are deduplicated by appending "_1" (snake_case) or "1" (camelCase) and so on.
 }

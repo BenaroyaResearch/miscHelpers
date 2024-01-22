@@ -5,7 +5,7 @@
 \title{Standardize the column and/or row names of a matrix or data frame to standard syntax, defaulting to camelCase}
 \usage{
 standardizeDimnames(
-  x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "camel")
+  x, cols = TRUE, rows = FALSE, dedup = TRUE, case = "camelCase")
 }
 \arguments{
 \item{x}{data frame or matrix with column and/or row names to be standardized}
@@ -13,6 +13,8 @@ standardizeDimnames(
 \item{cols, rows}{logical, whether to standardize the column and row names, respectively. By default, column names are standardized, but row names are not.}
 
 \item{dedup}{logical, whether to deduplicate the vector elements. If TRUE, elements that are identical after standardization are deduplicated by appending "_1", "_2", etc. Defaults to TRUE.}
+
+\item{case}{character, specifying whether to convert to camelCase or snake_case. Abbreviations are accepted. Defaults to camelCase.}
 }
 \value{
 an object of the same type and dimension as \code{x}
