@@ -8,6 +8,7 @@
 #' @param sPrior integer, pseudoCount for the target count to be added to the count from \code{counts}. Higher ratios of this to nPrior will results in lower discrimination between false and true positives, but better elimination of false negatives. Defaults to 1. 
 #' @export
 #' @return a data frame of specificity scores, with one row per sample and one column for each target marker. Each value is a likelihood score for specificity for that list's antigen
+#' @importFrom stats pbeta
 #' @usage
 #' scoreSpecificity(
 #'   counts, targets, controls,
