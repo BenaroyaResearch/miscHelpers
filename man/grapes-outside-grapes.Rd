@@ -5,7 +5,6 @@
 \title{Test if numbers are outside of a specified range}
 \usage{
 x \%outside\% rng
-
 `\%outside\%`(x, rng, inc_bounds = FALSE)
 }
 \arguments{

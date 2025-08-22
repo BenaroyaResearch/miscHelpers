@@ -8,7 +8,6 @@
 #' @return a logical vector with one element for each element in x
 #' @usage
 #' x \%outside\% rng
-#'
 #' `\%outside\%`(x, rng, inc_bounds = FALSE)
 "%outside%" <- function(x, rng, inc_bounds = FALSE) {
   if (inc_bounds) {x <= rng[1] | x >= rng[2]

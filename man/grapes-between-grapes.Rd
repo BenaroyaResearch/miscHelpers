@@ -5,7 +5,6 @@
 \title{Test if numbers are within a specified range}
 \usage{
 x \%between\% rng
-
 `\%between\%`(x, rng, inc_bounds = FALSE)
 }
 \arguments{
