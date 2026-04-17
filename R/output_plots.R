@@ -15,42 +15,70 @@
 #' @import grDevices
 #' @export
 output_plots <- function(
-    x, fileDir = "plots", fileStem,
-    plotFormat = c("plotscalePdf", "pdf", "png"), width, height, pngRes = 150,
-    overwrite = FALSE) {
-  if (!dir.exists(fileDir)) dir.create(fileDir)
-  
+  x,
+  fileDir = "plots",
+  fileStem,
+  plotFormat = c("plotscalePdf", "pdf", "png"),
+  width,
+  height,
+  pngRes = 150,
+  overwrite = FALSE
+) {
+  if (!dir.exists(fileDir)) {
+    dir.create(fileDir)
+  }
+
+  # verify that plotFormat is valid
+  validPlotFormats <- c("plotscalePdf", "pdf", "png")
+  if (!all(plotFormat %in% validPlotFormats)) {
+    stop(paste0(
+      "Invalid plotFormat specified. Valid options are: ",
+      paste(validPlotFormats, collapse = ", ")
+    ))
+  }
+
   # do not allow outputting of both plotscale and pdf/png together, as the sizing parameters are very different
-  if (("plotscalePdf" %in% plotFormat) & any(c("pdf", "png") %in% plotFormat))
+  if (("plotscalePdf" %in% plotFormat) & any(c("pdf", "png") %in% plotFormat)) {
     stop("Cannot output both plotscale and pdf/png at the same time.")
-  
+  }
+
   # note that for plotscalePdf, the width and height are for the plot area, not the graphics output area
   if ("plotscalePdf" %in% plotFormat) {
     filenameOut <- file.path(fileDir, paste0(fileStem, ".pdf"))
     if (!file.exists(filenameOut) | overwrite) {
       load_packages_with_install("plotscale")
       as.pdf(x, file = filenameOut, width = width, height = height)
-    } else warning(paste0("File ", filenameOut, " already exists."))
+    } else {
+      warning(paste0("File ", filenameOut, " already exists."))
+    }
   }
-  
+
   if ("pdf" %in% plotFormat) {
     filenameOut <- file.path(fileDir, paste0(fileStem, ".pdf"))
     if (!file.exists(filenameOut) | overwrite) {
-      pdf(filenameOut,
-          width = width, height = height)
+      pdf(filenameOut, width = width, height = height)
       print(x)
       invisible(dev.off())
-    } else warning(paste0("File ", filenameOut, " already exists."))
+    } else {
+      warning(paste0("File ", filenameOut, " already exists."))
+    }
   }
-  
+
   if ("png" %in% plotFormat) {
     filenameOut <- file.path(fileDir, paste0(fileStem, ".png"))
     if (!file.exists(filenameOut) | overwrite) {
-      png(filenameOut,
-          width = width, height = height, units = "in", res = pngRes)
+      png(
+        filenameOut,
+        width = width,
+        height = height,
+        units = "in",
+        res = pngRes
+      )
       print(x)
       invisible(dev.off())
-    } else warning(paste0("File ", filenameOut, " already exists."))
+    } else {
+      warning(paste0("File ", filenameOut, " already exists."))
+    }
   }
 }
 
