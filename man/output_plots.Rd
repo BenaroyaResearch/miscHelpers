@@ -9,7 +9,7 @@ output_plots(
   x,
   fileDir = "plots",
   fileStem,
-  plotFormat = c("plotscalePdf", "pdf", "png"),
+  plotFormat = c("plotscalePdf", "plotscalePng", "pdf", "png"),
   width,
   height,
   pngRes = 150,
@@ -20,7 +20,7 @@ outputPlots(
   x,
   fileDir = "plots",
   fileStem,
-  plotFormat = c("plotscalePdf", "pdf", "png"),
+  plotFormat = c("plotscalePdf", "plotscalePng", "pdf", "png"),
   width,
   height,
   pngRes = 150,
@@ -34,17 +34,18 @@ outputPlots(
 
 \item{fileStem}{the stem of the file name, without the extension}
 
-\item{plotFormat}{character vector of plot formats to output. Can be any combination of "plotscalePdf", "pdf", and "png".}
+\item{plotFormat}{character vector of plot formats to output. Can be any combination of "plotscalePdf", "plotscalePng", "pdf", and "png".}
 
-\item{width}{width of the plot or graphics output in inches; for plotscalePdf, this is the width of the plot area, not the graphics output area}
+\item{width}{width of the plot or graphics output in inches; for plotscalePdf and plotscalePng, this is the width of the plot area, not the graphics output area}
 
-\item{height}{height of the plot or graphics output; for plotscalePdf, this is the width of the plot area, not the graphics output area}
+\item{height}{height of the plot or graphics output; for plotscalePdf and plotscalePng, this is the height of the plot area, not the graphics output area}
 
-\item{pngRes}{resolution of the PNG file in dpi. Ignored if "png" is not in \code{plotFormat}. Defaults to 150.}
+\item{pngRes}{resolution of the PNG file in dpi. Ignored if \code{plotFormat} does not include "png" or "plotscalePng". Defaults to 150.}
 
 \item{overwrite}{logical indicating whether to overwrite an existing file. Defaults to \code{FALSE}. If \code{FALSE} and the file exists, the function will output a warning.}
 }
 \description{
 This function outputs plots with a specified format, while allowing checks for whether to overwrite
-an existing file. It is basically a wrapper on \code{pdf}, \code{png}, and \code{plotscale::as.pdf}.
+an existing file. It is basically a wrapper on \code{pdf}, \code{png}, \code{plotscale::as.pdf}, and \code{plotscale::as.png},
+with additional checks for file existence and overwriting.
 }
