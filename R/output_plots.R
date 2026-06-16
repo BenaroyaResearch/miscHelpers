@@ -51,7 +51,7 @@ output_plots <- function(
   if (missing(height)) {
     coll$push("'height' is missing: you must supply a plot height in inches.")
   } else {
-    checkmate::assert_number(height, lower = 0, finite = TRUE, add = coll)
+    checkmate::assert_number(height, lower = .Machine$double.eps, finite = TRUE, add = coll)
   }
 
   # Arguments with defaults: validate type/shape.
