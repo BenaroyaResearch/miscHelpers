@@ -46,10 +46,8 @@ output_plots <- function(
   if (missing(width)) {
     coll$push("'width' is missing: you must supply a plot width in inches.")
   } else {
-    # lower = 0 is inclusive; tighten to a small positive value if you want to
-    # forbid a width of exactly 0.
-    checkmate::assert_number(width, lower = 0, finite = TRUE, add = coll)
-  }
+    # lower is inclusive; require a strictly positive width.
+    checkmate::assert_number(width, lower = .Machine$double.eps, finite = TRUE, add = coll)
   if (missing(height)) {
     coll$push("'height' is missing: you must supply a plot height in inches.")
   } else {
