@@ -79,7 +79,10 @@ output_plots <- function(
   # ------------------------------------------------------------------------
 
   if (!dir.exists(fileDir)) {
-    dir.create(fileDir)
+    ok <- dir.create(fileDir, recursive = TRUE, showWarnings = FALSE)
+    if (!ok) {
+      stop(paste0("Failed to create output directory: ", fileDir))
+    }
   }
 
   # note that for plotscalePdf and plotscalePng, the width and height are for the plot area, not the graphics output area
